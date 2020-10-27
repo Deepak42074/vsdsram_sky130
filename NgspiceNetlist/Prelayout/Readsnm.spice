@@ -1,0 +1,39 @@
+*Model Description For calculating Read SNM
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+* Cross-coupled transistors
+XM1 q1 qb1 vdd vdd sky130_fd_pr__pfet_01v8 w=1.05 l=.15 m=1
+XM2 q1 qb1 0 0 sky130_fd_pr__nfet_01v8 w=.84 l=.15 m=1
+
+XM3 qb2 q2 vdd vdd sky130_fd_pr__pfet_01v8 w=1.05 l=.15 m=1
+XM4 qb2 q2 0 0 sky130_fd_pr__nfet_01v8 w=.84 l=.15 m=1
+
+*Access Transistors
+XM5 q1 vdd vdd 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM6 qb2 vdd vdd 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*Test Pulses
+V1 qb1 0 dc 1.8v
+V2 q2 0 dc 1.8v
+
+
+.op
+.dc V1 0 1.8 0.01 V2 0 1.8 0.01
+ 
+**************Control statements
+.control
+run 
+setplot
+setplot dc1
+
+plot q1 vs qb1 q2 vs qb2  
+
+.end
+
+

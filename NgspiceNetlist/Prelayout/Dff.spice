@@ -1,0 +1,65 @@
+*Model Description
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+********Negative latch part
+*Inv1
+XM1 dbar din vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM2 dbar din 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*pass Transistor TR1
+XM3 dbar clk 2 2 sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM4 dbar clkbar 2 2 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*Inv3
+XM5 Qm 2 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM6 Qm 2 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*Inv2
+XM7 3 Qm vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM8 3 Qm 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*pass Transistor TR2
+XM9 3 clkbar 2 2 sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM10 3 clk 2 2 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+****************Positive latch part
+*Inv5
+XMP1 4 Qm vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XMP2 4 Qm 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*pass Transistor TR4
+XMP3 4 clkbar 5 5 sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XMP4 4 clk 5 5 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*Inv6
+XMP5 Q 5 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XMP6 Q 5 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*Inv4
+XMP7 6 Q vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XMP8 6 Q 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*pass Transistor TR3
+XMP9 6 clk 5 5 sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XMP10 6 clkbar 5 5 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+********************
+*InvClk
+XMP11 clkbar clk vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XMP12 clkbar clk 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+Vdin din 0 pulse(0 1.8 2.5ns 60ps 60ps 15ns 30ns)
+Vclk clk 0 pulse(0 1.8 0 60ps 60ps 5ns 10ns)
+
+.tran 0.1ns 100ns
+
+.control
+run 
+plot Q din+4 clk+8
+.endc
+.end

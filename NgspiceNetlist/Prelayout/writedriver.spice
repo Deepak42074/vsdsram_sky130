@@ -1,0 +1,55 @@
+*Model Description of Write driver circuit
+
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+*Precharge ckt part for simulation purpose only
+XM1 bl 0 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM2 blbar 0 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+
+
+*Write driver...............
+*inv1
+XM3 dinb din vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM4 dinb din 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+*inv2
+XM5 dinbb dinb vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM6 dinbb dinb 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*XNOR1
+XM7 4 dinb vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM8 out1 wen 4 4  sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM9 out1 dinb 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM10 out1 wen 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*XNOR2
+XM11 5 dinbb vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM12 out2 wen 5 5  sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM13 out2 dinbb 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM14 out2 wen 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+XM15 blbar out1 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM16 bl out2 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+
+*Test Pulses
+
+Vwen wen 0 pulse(0 1.8 0 60ps 60ps 2ns 4ns)
+Vdin din 0 pulse(0 1.8 0 60ps 60ps .5ns 1ns)
+
+
+**************
+.tran 0.1p 10n
+.control
+run 
+plot wen+6 din+4 bl+2 blbar
+
+.endc
+.end
+
+

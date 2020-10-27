@@ -1,0 +1,29 @@
+*Model Description of Diffrentila sense Amplifier
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+XM1 dout1 2 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM2 2 2 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM3 2 blbar 3 3 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM4 dout1 bl 3 3 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM5 3 ren 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+XM6 dout dout1 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM7 dout dout1 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+v1 bl 0 pulse(0 1.8 0 60ps 60ps 1ns 2ns)
+v2 blbar 0 pulse(0 1.8 0 60ps 60ps 1ns 2ns)
+v3 ren 0 pulse(0 1.8 0 60ps 60ps 5ns 10ns)
+
+
+.tran 0.1p 20n
+.control
+run
+plot ren+6 bl+4 blbar+2 dout
+.endc
+.end

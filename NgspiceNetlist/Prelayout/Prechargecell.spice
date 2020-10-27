@@ -1,0 +1,32 @@
+*Model Description
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+* Cross-coupled transistors
+XM1 bl pclk vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM2 blbar pclk vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM3 blbar pclk bl bl sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+
+*Test Pulses
+
+v1 pclk 0 pulse(0 1.8 0.1ns 1ns 1ns 30ns 60ns)
+ 
+*Cload bl 0 10fF
+*Cload blbar 0 10fF
+.tran 2e-12 100e-09 0e-09
+
+
+**************Control statements
+.control
+run 
+
+plot pclk bl-2 blbar-4
+
+.end
+
+
