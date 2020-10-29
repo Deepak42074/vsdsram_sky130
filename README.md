@@ -10,17 +10,18 @@ are designed and simluated using opensource tools.
   <dd> 1. Open terminal </dd>
   <dd> 2. Type below command to install Ngspice: </dd>
 </dl>
+
 ```
 $   sudo apt-get install –y ngspice
 $   sudo apt install git
 $   git clone https://github.com/Deepak42074/VSD_SRAM.git
 $   cd VSD_SRAM/NgspiceNetlist/Prelayout/
 $   git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
-
 ```
 <dl>
   <dt> Simulation of Basic CMOS inverter:Basic check for installation </dt>
 </dl>
+
 ```
 $   cd VSD_SRAM/NgspiceNetlist/Prelayout/ 
 $    ngspice inv.spice 
