@@ -172,6 +172,7 @@ The SNM is defined as the length of side of largest square that can be drawn ins
 
 
 **1. Hold SNM**
+
 The ability of SRAM cell to retain the stored data in absence of word line is defined as hold stability and is calculated as Hold SNM.
 
 **Circuit Diagram :**
@@ -189,7 +190,7 @@ $  ngspice Holdsnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Holdsnm.png)
 
-On drawing the square of largest size in the two lobes we get below value.
+On drawing the square of largest size in the two lobes we get :
 Hold SNM = 0.71V
 
 
@@ -212,8 +213,7 @@ $  ngspice Readsnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Readsnm.png)
 
- On drawing the square of largest size we get below value.
- Read SNM = 0.42V 
+ On drawing the square of largest size we get: Read SNM = 0.42V 
 
 
 **3. Write SNM**
@@ -235,8 +235,7 @@ $  ngspice writesnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/writesnm.png)
 
-On drawing the square of largest size we get below value.
-Write SNM = 0.55V
+On drawing the square of largest size we get : Write SNM = 0.55V
 
 # Author
 * Deepak verma
