@@ -5,4 +5,5 @@ opensource compiler openRAM.The circuits(custom cells) which are required as inp
 are designed and simluated using opensource tools.
 
 #SRAM Memory Architecture
-![alt text](https://github.com/Deepak42074/VSD_SRAM/blob/main/SramMemoryArchitecture/SRAM_memory_architecture.png)
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SramMemoryArchitecture/SRAM_memory_architecture.png)
