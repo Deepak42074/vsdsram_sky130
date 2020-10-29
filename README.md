@@ -18,6 +18,17 @@ $   git clone https://github.com/Deepak42074/VSD_SRAM.git
 $   cd VSD_SRAM/NgspiceNetlist/Prelayout/
 $   git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
 ```
+**OR**
+
+```
+$  sudo apt install git
+$  git clone https://github.com/Deepak42074/VSD_SRAM.git
+$  cd VSD_SRAM
+$  chmod +777 install_and_clone.sh
+$  ./ install_and_clone.sh
+
+```
+
 <dl>
   <dd> 3. Simulation of Basic CMOS inverter:Basic check for installation </dd>
 </dl>
