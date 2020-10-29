@@ -35,6 +35,7 @@ $    ngspice inv.spice
 
 
 # Prelayout Schematic and Simulation waveforms:
+The Schematics are drawn using opensource xschemrc tool and simulation is performed using Ngspice,both are configured with sky130 library.
 
 ## 1. 6T_SRAM cell 
 The standard 1-bit 6T - SRAM cell consists of 6 transistors. It has pair of cross-coupled CMOS inverters and two NMOS access transistors(M5, M6). 
