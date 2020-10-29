@@ -1,7 +1,6 @@
 #!/bin/bash
 
 sudo apt-get install -y ngspice
-sudo apt install git
 
 cd NgspiceNetlist/Prelayout/
 
