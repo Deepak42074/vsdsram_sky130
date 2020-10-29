@@ -140,6 +140,31 @@ $  ngspice Dff.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Dff.png)
 
+## 7. 1bit_sram_read 
+
+**Simulation Waveform :**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+ 
+```
+$  ngspice 1bit_sram_read.png
+```
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/1bit_sram_read.png)
+
+## 8. 1bit_sram_write 
+**Simulation Waveform :**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+ 
+```
+$  ngspice 1bit_write_read.png
+```
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/1bit_sram_write.png)
+
 ## Static Noise Margin Calculation of 6T sram cell
 SNM is defined as minimum DC noise voltage needed to flip the cell state .It shows the stability of sram cell,used to measure the robustness of a cell which shows how well it can hold its data.
 To find SNM we draw inverter charactersitics and its mirror characteristics. The resulting two lobe curves is called "Butterfly curve".
@@ -164,12 +189,14 @@ $  ngspice Holdsnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Holdsnm.png)
 
-On drawing the square of largest size in the two lobes we get 
+On drawing the square of largest size in the two lobes we get below value.
 Hold SNM = 0.71V
 
 
 **2. Read SNM**
-Read SNM is used to measure read ability which is the ability to prevent the sram cell to flip the stored value while reading the stored value
+
+Read SNM is used to measure read ability which is the ability to prevent the sram cell to flip the stored value while reading the stored value.
+
 **Circuit Diagram :**
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Readsnm.png)
@@ -185,10 +212,12 @@ $  ngspice Readsnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Readsnm.png)
 
-On drawing the square of largest size we get 
-Read SNM = 0.42V
+ On drawing the square of largest size we get below value.
+ Read SNM = 0.42V 
+
 
 **3. Write SNM**
+
 The minimum voltage required to feed new value into the sram cell is kown as write margin.
 
 **Circuit Diagram :**
@@ -206,7 +235,7 @@ $  ngspice writesnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/writesnm.png)
 
-On drawing the square of largest size we get 
+On drawing the square of largest size we get below value.
 Write SNM = 0.55V
 
 # Author
