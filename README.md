@@ -17,13 +17,14 @@ are designed and simluated using opensource tools.
 ### Cloning to repository
 <dl>
   <dd> git clone https://github.com/Deepak42074/VSD_SRAM.git </dd>
-      <dd> Change directory to Prelayout directory : </dd>
-##### cd VSD_SRAM/NgspiceNetlist/Prelayout/
-* Cloning to Sky130 pdk: 
-##### git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
-* Simulation of Basic CMOS inverter:
-##### cd VSD_SRAM/NgspiceNetlist/Prelayout/
-##### ngspice inv.spice
+  <dd> Change directory to Prelayout directory : </dd>
+      <dd> cd VSD_SRAM/NgspiceNetlist/Prelayout/ </dd>
+  <dt>Cloning to Sky130 pdk:  </dt>
+  <dd> git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr </dd>
+  <dt> Simulation of Basic CMOS inverter: </dt>
+  <dd> cd VSD_SRAM/NgspiceNetlist/Prelayout/ </dd>
+  <dd> ngspice inv.spice </dd>
+ </dl>
 
 
  
@@ -45,8 +46,10 @@ PMOS transistors(M1,M2) are driver and pull up transistors respectively.
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/6T_sram_cell.png)
 
 **Simulation Waveform**
-** Type below command in Prealyout directory**
-** ngspice 6T_sram_cell.spice**
+<dl>
+  <dd> Type below command in Prealyout directory </dd>
+  <dd> ngspice 6T_sram_cell.spice </dd>
+ </dl>
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/6T_sram_cell.png)
 
