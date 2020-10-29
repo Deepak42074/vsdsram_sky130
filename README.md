@@ -8,7 +8,7 @@ are designed and simluated using opensource tools.
 ### Installing Ngspice and Git package
 <dl>
   <dt> 1. Open terminal </dt>
-  <dt> 2. Type below command to install Ngspice: </dt?
+  <dt> 2. Type below command to install Ngspice: </dt>
   <dd> sudo apt-get install –y ngspice </dd>
   <dt> 3. Type below command to install git package: </dt>
   <dd> sudo apt install git </dd>
@@ -17,7 +17,7 @@ are designed and simluated using opensource tools.
 ### Cloning to repository
 <dl>
   <dd> git clone https://github.com/Deepak42074/VSD_SRAM.git </dd>
-  <dd> Change directory to Prelayout directory : </dd>
+      <dd> Change directory to Prelayout directory : </dd>
 ##### cd VSD_SRAM/NgspiceNetlist/Prelayout/
 * Cloning to Sky130 pdk: 
 ##### git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
