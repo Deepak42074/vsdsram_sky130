@@ -19,11 +19,11 @@ $   cd VSD_SRAM/NgspiceNetlist/Prelayout/
 $   git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
 ```
 <dl>
-  <dt> Simulation of Basic CMOS inverter:Basic check for installation </dt>
+  <dd> 3. Simulation of Basic CMOS inverter:Basic check for installation </dd>
 </dl>
 
 ```
-$   cd VSD_SRAM/NgspiceNetlist/Prelayout/ 
+$    cd VSD_SRAM/NgspiceNetlist/Prelayout/ 
 $    ngspice inv.spice 
 ```
 
@@ -40,18 +40,99 @@ $    ngspice inv.spice
 The standard 1-bit 6T - SRAM cell consists of 6 transistors. It has pair of cross-coupled CMOS inverters and two NMOS access transistors(M5, M6). 
 The NMOS transistors (M3, M4) and PMOS transistors(M1,M2) are driver and pull up transistors respectively.
 
+**Circuit Diagram**
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/6T_sram_cell.png)
 
 **Simulation Waveform**
 <dl>
-  <dd> Type below command in Prealyout directory </dd>
-
-```
-$  ngspice 6T_sram_cell.spice </dd>
-```
+  <dd> Type below command in Prelayout directory </dd>
 </dl>
 
+```
+$  ngspice 6T_sram_cell.spice 
+```
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/6T_sram_cell.png)
+
+## 2. Precharge circuit
+
+**Circuit Diagram**
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Precharge_Cell.png)
+
+**Simulation Waveform**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+
+```
+$  ngspice Prechargecell.spice 
+```
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Precharge_cell.png)
+
+## 3. Differential Sense Amplifier
+
+**Circuit Diagram**
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Differential_sense_amplifier.png)
+
+**Simulation Waveform**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+
+```
+$  ngspice Differential_sense_amplifier.spice 
+```
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Differential_sense_amplifier.png)
+
+## 4. Write Driver Circuit
+
+**Circuit Diagram**
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/write_driver.png)
+
+**Simulation Waveform**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+
+```
+$  ngspice writedriver.spice 
+```
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/writedriver.png)
+
+## 5. Tristate Buffer
+
+**Circuit Diagram**
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Tristate_buffer.png)
+
+**Simulation Waveform**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+
+```
+$  ngspice Tristate_buffer.spice 
+```
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Tristate_buffer.png)
+
+## 6. D flip flop
+
+**Circuit Diagram**
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Dff.png)
+
+**Simulation Waveform**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+
+```
+$  ngspice Dff.spice
+```
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Dff.png)
+
+
+
+
 
 
 
