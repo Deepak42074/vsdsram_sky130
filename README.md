@@ -15,13 +15,13 @@ are designed and simluated using opensource tools.
 sudo apt-get install –y ngspice
 3. Type below command to install git package:
 sudo apt install git
-###Cloning to repository:
+### Cloning to repository:
 * git clone https://github.com/Deepak42074/VSD_SRAM.git
-Change directory to Prelayout directory :
+1. Change directory to Prelayout directory :
 cd VSD_SRAM/NgspiceNetlist/Prelayout/
-*Cloning to Sky130 pdk: 
+* Cloning to Sky130 pdk: 
 git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
-*Simulation of Basic CMOS inverter:
+* Simulation of Basic CMOS inverter:
 cd VSD_SRAM/NgspiceNetlist/Prelayout/
 ngspice inv.spice
 
