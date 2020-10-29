@@ -7,27 +7,24 @@ are designed and simluated using opensource tools.
 ## Installing and cloning of repository
 ### Installing Ngspice and Git package
 <dl>
-  <dt> 1. Open terminal </dt>
-  <dt> 2. Type below command to install Ngspice: </dt>
-  <dd> sudo apt-get install –y ngspice </dd>
-  <dt> 3. Type below command to install git package: </dt>
-  <dd> sudo apt install git </dd>
+  <dd> 1. Open terminal </dd>
+  <dd> 2. Type below command to install Ngspice: </dd>
 </dl>
+```
+$   sudo apt-get install –y ngspice
+$   sudo apt install git
+$   git clone https://github.com/Deepak42074/VSD_SRAM.git
+$   cd VSD_SRAM/NgspiceNetlist/Prelayout/
+$   git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
 
-### Cloning to repository
+```
 <dl>
-  <dd> git clone https://github.com/Deepak42074/VSD_SRAM.git </dd>
-  <dd> Change directory to Prelayout directory : </dd>
-      <dd> cd VSD_SRAM/NgspiceNetlist/Prelayout/ </dd>
-  <dt>Cloning to Sky130 pdk:  </dt>
-  <dd> git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr </dd>
-  <dt> Simulation of Basic CMOS inverter: </dt>
-  <dd> cd VSD_SRAM/NgspiceNetlist/Prelayout/ </dd>
-  <dd> ngspice inv.spice </dd>
- </dl>
-
-
- 
+  <dt> Simulation of Basic CMOS inverter:Basic check for installation </dt>
+</dl>
+```
+$   cd VSD_SRAM/NgspiceNetlist/Prelayout/ 
+$    ngspice inv.spice 
+```
 
 
 
@@ -38,18 +35,20 @@ are designed and simluated using opensource tools.
 
 # Prelayout Schematic and Simulaiton waveforms:
 
-## 6T_SRAM cell 
-The standard 1-bit 6T - SRAM cell consists of 6 transistors. It has pair of cross-coupled   	                
-CMOS inverters and two NMOS access transistors (M5, M6). The NMOS transistors (M3, M4) and 
-PMOS transistors(M1,M2) are driver and pull up transistors respectively.
+## 1. 6T_SRAM cell 
+The standard 1-bit 6T - SRAM cell consists of 6 transistors. It has pair of cross-coupled CMOS inverters and two NMOS access transistors(M5, M6). 
+The NMOS transistors (M3, M4) and PMOS transistors(M1,M2) are driver and pull up transistors respectively.
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/6T_sram_cell.png)
 
 **Simulation Waveform**
 <dl>
   <dd> Type below command in Prealyout directory </dd>
-  <dd> ngspice 6T_sram_cell.spice </dd>
- </dl>
+
+```
+$  ngspice 6T_sram_cell.spice </dd>
+```
+</dl>
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/6T_sram_cell.png)
 
