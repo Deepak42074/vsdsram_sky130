@@ -40,11 +40,11 @@ $    ngspice inv.spice
 The standard 1-bit 6T - SRAM cell consists of 6 transistors. It has pair of cross-coupled CMOS inverters and two NMOS access transistors(M5, M6). 
 The NMOS transistors (M3, M4) and PMOS transistors(M1,M2) are driver and pull up transistors respectively.
 
-**Circuit Diagram**
+**Circuit Diagram :**
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/6T_sram_cell.png)
 
-**Simulation Waveform**
+**Simulation Waveform :**
 <dl>
   <dd> Type below command in Prelayout directory </dd>
 </dl>
@@ -57,10 +57,11 @@ $  ngspice 6T_sram_cell.spice
 
 ## 2. Precharge circuit
 
-**Circuit Diagram**
+**Circuit Diagram :**
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Precharge_Cell.png)
 
-**Simulation Waveform**
+**Simulation Waveform :**
 <dl>
   <dd> Type below command in Prelayout directory </dd>
 </dl>
@@ -68,14 +69,16 @@ $  ngspice 6T_sram_cell.spice
 ```
 $  ngspice Prechargecell.spice 
 ```
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Precharge_cell.png)
 
 ## 3. Differential Sense Amplifier
 
-**Circuit Diagram**
+**Circuit Diagram :**
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Differential_sense_amplifier.png)
 
-**Simulation Waveform**
+**Simulation Waveform :**
 <dl>
   <dd> Type below command in Prelayout directory </dd>
 </dl>
@@ -83,14 +86,16 @@ $  ngspice Prechargecell.spice
 ```
 $  ngspice Differential_sense_amplifier.spice 
 ```
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Differential_sense_amplifier.png)
 
 ## 4. Write Driver Circuit
 
-**Circuit Diagram**
+**Circuit Diagram :**
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/write_driver.png)
 
-**Simulation Waveform**
+**Simulation Waveform :**
 <dl>
   <dd> Type below command in Prelayout directory </dd>
 </dl>
@@ -98,14 +103,16 @@ $  ngspice Differential_sense_amplifier.spice
 ```
 $  ngspice writedriver.spice 
 ```
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/writedriver.png)
 
 ## 5. Tristate Buffer
 
-**Circuit Diagram**
+**Circuit Diagram :**
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Tristate_buffer.png)
 
-**Simulation Waveform**
+**Simulation Waveform :**
 <dl>
   <dd> Type below command in Prelayout directory </dd>
 </dl>
@@ -113,14 +120,16 @@ $  ngspice writedriver.spice
 ```
 $  ngspice Tristate_buffer.spice 
 ```
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Tristate_buffer.png)
 
 ## 6. D flip flop
 
-**Circuit Diagram**
+**Circuit Diagram :**
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Dff.png)
 
-**Simulation Waveform**
+**Simulation Waveform :**
 <dl>
   <dd> Type below command in Prelayout directory </dd>
 </dl>
@@ -128,7 +137,64 @@ $  ngspice Tristate_buffer.spice
 ```
 $  ngspice Dff.spice
 ```
+
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Dff.png)
+
+### Static Noise Margin Calculation of 6T sram cell
+
+theory
+
+** 1. Hold SNM **
+
+**Circuit Diagram :**
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Holdsnm.png)
+
+**Simulation Waveform :**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+
+```
+$  ngspice Holdsnm.spice
+```
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Holdsnm.png)
+
+
+** 2. Read SNM **
+
+**Circuit Diagram :**
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Readsnm.png)
+
+**Simulation Waveform :**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+
+```
+$  ngspice Readsnm.spice
+```
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Readsnm.png)
+
+** 3. Write SNM **
+
+**Circuit Diagram :**
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/writesnm.png)
+
+**Simulation Waveform :**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+
+```
+$  ngspice writesnm.spice
+```
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/writesnm.png)
 
 
 
