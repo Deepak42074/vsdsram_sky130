@@ -4,7 +4,7 @@ and access time of less than 2.5ns using opensource sky130 pdk technology and co
 opensource compiler openRAM.The circuits(custom cells) which are required as input to openRAM 
 are designed and simluated using opensource tools.
 
-## Installing and cloning of repository
+## Installing and Cloning of Repository
 ### Installing Ngspice and Git package
 <dl>
   <dd> 1. Open terminal </dd>
@@ -34,11 +34,11 @@ $    ngspice inv.spice
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SramMemoryArchitecture/SRAM_memory_architecture.png)
 
 
-# Prelayout Schematic and Simulaiton waveforms:
+# Prelayout Schematic and Simulation waveforms:
 
 ## 1. 6T_SRAM cell 
 The standard 1-bit 6T - SRAM cell consists of 6 transistors. It has pair of cross-coupled CMOS inverters and two NMOS access transistors(M5, M6). 
-The NMOS transistors (M3, M4) and PMOS transistors(M1,M2) are driver and pull up transistors respectively.
+The NMOS transistors (M2, M4) and PMOS transistors(M1,M3) are driver and pull up transistors respectively.
 
 **Circuit Diagram :**
 
@@ -133,18 +133,21 @@ $  ngspice Tristate_buffer.spice
 <dl>
   <dd> Type below command in Prelayout directory </dd>
 </dl>
-
+ 
 ```
 $  ngspice Dff.spice
 ```
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Dff.png)
 
-### Static Noise Margin Calculation of 6T sram cell
+## Static Noise Margin Calculation of 6T sram cell
+SNM is defined as minimum DC noise voltage needed to flip the cell state .It shows the stability of sram cell,used to measure the robustness of a cell which shows how well it can hold its data.
+To find SNM we draw inverter charactersitics and its mirror characteristics. The resulting two lobe curves is called "Butterfly curve".
+The SNM is defined as the length of side of largest square that can be drawn inside the lobes of butterfly curve.
 
-theory
 
-** 1. Hold SNM **
+**1. Hold SNM**
+The ability of SRAM cell to retain the stored data in absence of word line is defined as hold stability and is calculated as Hold SNM.
 
 **Circuit Diagram :**
 
@@ -161,9 +164,12 @@ $  ngspice Holdsnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Holdsnm.png)
 
+On drawing the square of largest size in the two lobes we get 
+Hold SNM = 0.71V
 
-** 2. Read SNM **
 
+**2. Read SNM**
+Read SNM is used to measure read ability which is the ability to prevent the sram cell to flip the stored value while reading the stored value
 **Circuit Diagram :**
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Readsnm.png)
@@ -179,7 +185,11 @@ $  ngspice Readsnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Readsnm.png)
 
-** 3. Write SNM **
+On drawing the square of largest size we get 
+Read SNM = 0.42V
+
+**3. Write SNM**
+The minimum voltage required to feed new value into the sram cell is kown as write margin.
 
 **Circuit Diagram :**
 
@@ -196,8 +206,22 @@ $  ngspice writesnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/writesnm.png)
 
+On drawing the square of largest size we get 
+Write SNM = 0.55V
 
+# Author
+* Deepak verma
 
+# Acknowledgements  
+* Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
+* Philipp Gühring, Software Architect, LibreSilicon Assocation
+* Yash Kumar, VSD Teaching Assistant  - laryash99@gmail.com
+* Reuel Reuben, VSD Teaching Assistant  -reuel992000@gmail.com
+
+# Contact Information  
+* Deepak verma ,B.Tech(Electronics and Communication-2018),IIIT Sonepat -deepak074.verma@gmail.com
+* Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. - kunalghosh@gmail.com
+* Philipp Gühring, Software Architect, LibreSilicon Assocation - pg@futureware.at
 
 
 
