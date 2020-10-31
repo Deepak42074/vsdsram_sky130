@@ -44,12 +44,12 @@ $    ngspice inv.spice
 
 ## SRAM Memory Architecture
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Others/SRAM_memory_architecture.png
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Others/SRAM_memory_architecture.png)
 
 ## Inputs to OpenRAM compiler
 Below images the show the inputs required to openRAM compiler:
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Others/Openram_Compiler.png
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Others/Openram_Compiler.png)
 
 Custom cells required:
 * SRAM bit cell
