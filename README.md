@@ -8,7 +8,7 @@ are designed and simluated using opensource tools.
 ### Installing Ngspice and Git package
 <dl>
   <dd> 1. Open terminal </dd>
-  <dd> 2. Type below command to install Ngspice: </dd>
+  <dd> 2. Type below command to install and clone: </dd>
 </dl>
 
 ```
@@ -25,12 +25,12 @@ $  sudo apt install git
 $  git clone https://github.com/Deepak42074/VSD_SRAM.git
 $  cd VSD_SRAM
 $  chmod +777 install_and_clone.sh
-$  ./ install_and_clone.sh
+$  ./install_and_clone.sh
 
 ```
 
 <dl>
-  <dd> 3. Simulation of Basic CMOS inverter:Basic check for installation </dd>
+  <dd> 3. Simulation of Basic CMOS inverter: Basic check for installation </dd>
 </dl>
 
 ```
@@ -72,6 +72,8 @@ $  ngspice 6T_sram_cell.spice
 **Circuit Diagram :**
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Precharge_Cell.png)
+
+Here we have used M3 as equalizer to reduce power consumption and faster operation.
 
 **Simulation Waveform :**
 <dl>
