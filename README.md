@@ -1,14 +1,18 @@
 # VSD_SRAM
 This project focuses on design of 1024x32(4KB) SRAM memory with operating voltage of 1.8v 
-and access time of less than 2.5ns using opensource sky130 pdk technology and compiled using 
+and access time of less than 2.5ns using opensource Google-skywater(sky130) pdk technology and compiled using 
 opensource compiler openRAM.The circuits(custom cells) which are required as input to openRAM 
 are designed and simluated using opensource tools.
 
 
 # Opensource Tools used:
 
-1. Ngspice : Ngspice is an opensource spice simulator for electric and electronic circuits.For more info regarding ngspice installation and tutorial follow http://ngspice.sourceforge.net/ngspice-tutorial.html 
+1. Ngspice : Ngspice is an opensource spice simulator for electric and electronic circuits.For more info regarding ngspice installation and tutorial follow http://ngspice.sourceforge.net/ngspice-tutorial.html .
 
+2. xschem : An opensource source tool for drawing schematics.It allows hierarchical representation of circuits.For installation and configurin with sky130 follow :
+https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md#installation-of-sky130-primitives-and-symbols .
+
+NOTE: Any other schematic drawing tool can be used in place of xschem. Here installation of xschem is not required for running this project on your machine.
 
 ## Installing and Cloning Instructions
 
@@ -26,7 +30,7 @@ $  chmod +777 install_and_clone.sh
 $  ./install_and_clone.sh
 
 ```
-Note: Running script install_and_clone.sh will install ngspice tool and clone to required sky130 PDK.
+Note: Running script install_and_clone.sh will install ngspice tool and clone to required Google-skywater(sky130) PDK.
 
 <dl>
   <dd> 3. Simulation of Basic CMOS inverter: Basic check for installation </dd>
@@ -44,7 +48,8 @@ $    ngspice inv.spice
 
 
 # Prelayout Schematic and Simulation waveforms:
-The Schematics are drawn using opensource xschemrc tool and simulation is performed using Ngspice,both are configured with sky130 library.
+The Schematics are drawn using opensource xschem tool and simulation is performed using Ngspice,both are configured with sky130 library.
+
 
 ## 1. 6T_SRAM cell 
 The standard 1-bit 6T - SRAM cell consists of 6 transistors. It has pair of cross-coupled CMOS inverters and two NMOS access transistors(M5, M6). 
@@ -247,7 +252,9 @@ $  ngspice writesnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/writesnm.png)
 
-On drawing the square of largest size we get : Write SNM = 0.55V
+On drawing the square of largest size we get : Write SNM = 0.72V
+
+
 
 # Author
 * Deepak verma
