@@ -44,7 +44,7 @@ $    ngspice inv.spice
 
 ## SRAM Memory Architecture
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SramMemoryArchitecture/SRAM_memory_architecture.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Others/SRAM_memory_architecture.png)
 
 
 # Prelayout Schematic and Simulation waveforms:
