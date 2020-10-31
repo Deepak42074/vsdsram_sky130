@@ -4,21 +4,19 @@ and access time of less than 2.5ns using opensource sky130 pdk technology and co
 opensource compiler openRAM.The circuits(custom cells) which are required as input to openRAM 
 are designed and simluated using opensource tools.
 
-## Installing and Cloning of Repository
-### Installing Ngspice and Git package
-<dl>
-  <dd> 1. Open terminal </dd>
-  <dd> 2. Type below command to install and clone: </dd>
-</dl>
 
-```
-$   sudo apt-get install –y ngspice
-$   sudo apt install git
-$   git clone https://github.com/Deepak42074/VSD_SRAM.git
-$   cd VSD_SRAM/NgspiceNetlist/Prelayout/
-$   git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
-```
-**OR**
+# Opensource Tools used:
+
+1. Ngspice : Ngspice is an opensource spice simulator for electric and electronic circuits.For more info regarding ngspice installation and tutorial follow http://ngspice.sourceforge.net/ngspice-tutorial.html 
+
+
+## Installing and Cloning Instructions
+
+Please follow below instructions :(For Ubuntu users)
+<dl>
+    <dd> 1. Open terminal </dd>
+    <dd> 2. Type below command to install git and clone repository: </dd>
+</dl>
 
 ```
 $  sudo apt install git
@@ -28,6 +26,7 @@ $  chmod +777 install_and_clone.sh
 $  ./install_and_clone.sh
 
 ```
+Note: Running script install_and_clone.sh will install ngspice tool and clone to required sky130 PDK.
 
 <dl>
   <dd> 3. Simulation of Basic CMOS inverter: Basic check for installation </dd>
@@ -37,7 +36,6 @@ $  ./install_and_clone.sh
 $    cd VSD_SRAM/NgspiceNetlist/Prelayout/ 
 $    ngspice inv.spice 
 ```
-
 
 
 ## SRAM Memory Architecture
@@ -71,7 +69,7 @@ $  ngspice 6T_sram_cell.spice
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Precharge_Cell.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Prechargecell.png)
 
 Here we have used M3 as equalizer to reduce power consumption and faster operation.
 
@@ -84,7 +82,7 @@ Here we have used M3 as equalizer to reduce power consumption and faster operati
 $  ngspice Prechargecell.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Precharge_cell.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Prechargecell.png)
 
 ## 3. Differential Sense Amplifier
 
