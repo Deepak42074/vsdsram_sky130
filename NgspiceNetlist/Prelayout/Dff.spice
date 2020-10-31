@@ -1,0 +1,51 @@
+*Model Description
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+*Transmisson gate
+XM1 1 clk din vdd sky130_fd_pr__pfet_01v8 l=0.15 w=0.55
+XM2 1 clkbar din 0 sky130_fd_pr__nfet_01v8 l=0.15 w=0.42
+ 
+XM3 2 1 vdd vdd sky130_fd_pr__pfet_01v8 l=0.15 w=0.55
+XM4 2 1 0 0 sky130_fd_pr__nfet_01v8 l=0.15 w=0.42
+
+XM5 3 2 vdd vdd sky130_fd_pr__pfet_01v8 l=0.15 w=0.55
+XM6 3 2 0 0 sky130_fd_pr__nfet_01v8 l=0.15 w=0.42
+
+*Transmisson gate
+XM7 1 clkbar 3 vdd sky130_fd_pr__pfet_01v8 l=0.15 w=0.55
+XM8 1 clk 3 0 sky130_fd_pr__nfet_01v8 l=0.15 w=0.42
+
+*Transmisson gate
+XM9 4 clkbar 2 vdd sky130_fd_pr__pfet_01v8 l=0.15 w=0.55
+XM10 4 clk 2 0 sky130_fd_pr__nfet_01v8 l=0.15 w=0.42
+
+XM11 Q 4 vdd vdd sky130_fd_pr__pfet_01v8 l=0.15 w=0.55
+XM12 Q 4 0 0 sky130_fd_pr__nfet_01v8 l=0.15 w=0.42
+
+XM13 5 Q vdd vdd sky130_fd_pr__pfet_01v8 l=0.15 w=0.55
+XM14 5 Q 0 0 sky130_fd_pr__nfet_01v8 l=0.15 w=0.42
+
+*Transmisson gate
+XM15 4 clk 5 vdd sky130_fd_pr__pfet_01v8 l=0.15 w=0.55
+XM16 4 clkbar 5 0 sky130_fd_pr__nfet_01v8 l=0.15 w=0.42
+
+*InvClk
+XMP1 clkbar clk vdd vdd sky130_fd_pr__pfet_01v8 w=1.05 l=.15 m=1
+XMN1 clkbar clk 0 0 sky130_fd_pr__nfet_01v8 w=.84 l=.15 m=1
+
+Vdin din 0 pulse(0 1.8 2.5ns 60ps 60ps 15ns 30ns)
+Vclk clk 0 pulse(0 1.8 0 60ps 60ps 5ns 10ns)
+
+.tran 0.1ns 100ns
+
+.control
+run 
+plot Q din+4 clk+8
+.endc
+.end
