@@ -44,8 +44,19 @@ $    ngspice inv.spice
 
 ## SRAM Memory Architecture
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Others/SRAM_memory_architecture.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Others/SRAM_memory_architecture.png
 
+## Inputs to OpenRAM compiler
+Below images the show the inputs required to openRAM compiler:
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Others/Openram_Compiler.png
+
+Custom cells required:
+* SRAM bit cell
+* Write Driver
+* Sense Ampilfier
+* Tristate Buffer
+* D-flip flop
 
 # Prelayout Schematic and Simulation waveforms:
 The Schematics are drawn using opensource xschem tool and simulation is performed using Ngspice,both are configured with sky130 library.
@@ -140,7 +151,7 @@ $  ngspice Tristate_buffer.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Tristate_buffer.png)
 
-## 6. D flip flop
+## 6. Positive Edge Triggered D flip flop
 
 **Circuit Diagram :**
 
@@ -208,7 +219,7 @@ $  ngspice Holdsnm.spice
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Holdsnm.png)
 
 On drawing the square of largest size in the two lobes we get :
-Hold SNM = 0.71V
+Hold SNM = min(SNMH,SNML)= 0.71V
 
 
 **2. Read SNM**
@@ -230,12 +241,12 @@ $  ngspice Readsnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Readsnm.png)
 
- On drawing the square of largest size we get: Read SNM = 0.42V 
+ On drawing the square of largest size between two curves we get: Read SNM = min(SNMH,SNML) 0.42V 
 
 
 **3. Write SNM**
 
-The minimum voltage required to feed new value into the sram cell is kown as write margin.
+The minimum voltage required to feed new value into the sram cell is known as write margin.
 
 **Circuit Diagram :**
 
@@ -252,7 +263,7 @@ $  ngspice writesnm.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/writesnm.png)
 
-On drawing the square of largest size we get : Write SNM = 0.72V
+On drawing the square of largest size  between two curves we get : Write SNM = 0.72V
 
 
 
