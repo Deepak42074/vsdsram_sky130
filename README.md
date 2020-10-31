@@ -37,7 +37,7 @@ Note: Running script install_and_clone.sh will install ngspice tool and clone to
 </dl>
 
 ```
-$    cd VSD_SRAM/NgspiceNetlist/Prelayout/ 
+$    cd VSD_SRAM/Ngspice_Netlist/Prelayout/ 
 $    ngspice inv.spice 
 ```
 
@@ -68,7 +68,7 @@ The NMOS transistors (M2, M4) and PMOS transistors(M1,M3) are driver and pull up
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/6T_sram_cell.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/6T_sram_cell.png)
 
 **Simulation Waveform :**
 <dl>
@@ -79,13 +79,13 @@ The NMOS transistors (M2, M4) and PMOS transistors(M1,M3) are driver and pull up
 $  ngspice 6T_sram_cell.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/6T_sram_cell.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/6T_sram_cell.png)
 
 ## 2. Precharge circuit
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Prechargecell.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Prechargecell.png)
 
 Here we have used M3 as equalizer to reduce power consumption and faster operation.
 
@@ -98,13 +98,13 @@ Here we have used M3 as equalizer to reduce power consumption and faster operati
 $  ngspice Prechargecell.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Prechargecell.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Prechargecell.png)
 
 ## 3. Differential Sense Amplifier
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Differential_sense_amplifier.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Differential_sense_amplifier.png)
 
 **Simulation Waveform :**
 <dl>
@@ -115,13 +115,13 @@ $  ngspice Prechargecell.spice
 $  ngspice Differential_sense_amplifier.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Differential_sense_amplifier.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Differential_sense_amplifier.png)
 
 ## 4. Write Driver Circuit
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/write_driver.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/write_driver.png)
 
 **Simulation Waveform :**
 <dl>
@@ -132,13 +132,13 @@ $  ngspice Differential_sense_amplifier.spice
 $  ngspice writedriver.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/writedriver.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/writedriver.png)
 
 ## 5. Tristate Buffer
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Tristate_buffer.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Tristate_buffer.png)
 
 **Simulation Waveform :**
 <dl>
@@ -149,13 +149,13 @@ $  ngspice writedriver.spice
 $  ngspice Tristate_buffer.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Tristate_buffer.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SSimulation_Waveform/Prelayout/Tristate_buffer.png)
 
 ## 6. Positive Edge Triggered D flip flop
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Dff.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Dff.png)
 
 **Simulation Waveform :**
 <dl>
@@ -166,7 +166,7 @@ $  ngspice Tristate_buffer.spice
 $  ngspice Dff.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Dff.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Dff.png)
 
 ## 7. 1bit_sram_read 
 
@@ -179,7 +179,7 @@ $  ngspice Dff.spice
 $  ngspice 1bit_sram_read.png
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/1bit_sram_read.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/1bit_sram_read.png)
 
 ## 8. 1bit_sram_write 
 **Simulation Waveform :**
@@ -191,7 +191,7 @@ $  ngspice 1bit_sram_read.png
 $  ngspice 1bit_write_read.png
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/1bit_sram_write.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/1bit_sram_write.png)
 
 ## Static Noise Margin Calculation of 6T sram cell
 SNM is defined as minimum DC noise voltage needed to flip the cell state .It shows the stability of sram cell,used to measure the robustness of a cell which shows how well it can hold its data.
@@ -205,7 +205,7 @@ The ability of SRAM cell to retain the stored data in absence of word line is de
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Holdsnm.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Holdsnm.png)
 
 **Simulation Waveform :**
 <dl>
@@ -216,7 +216,7 @@ The ability of SRAM cell to retain the stored data in absence of word line is de
 $  ngspice Holdsnm.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Holdsnm.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Holdsnm.png)
 
 On drawing the square of largest size in the two lobes we get :
 Hold SNM = min(SNMH,SNML)= 0.71V
@@ -228,7 +228,7 @@ Read SNM is used to measure read ability which is the ability to prevent the sra
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/Readsnm.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Readsnm.png)
 
 **Simulation Waveform :**
 <dl>
@@ -239,7 +239,7 @@ Read SNM is used to measure read ability which is the ability to prevent the sra
 $  ngspice Readsnm.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/Readsnm.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Readsnm.png)
 
  On drawing the square of largest size between two curves we get: Read SNM = min(SNMH,SNML) 0.42V 
 
@@ -250,7 +250,7 @@ The minimum voltage required to feed new value into the sram cell is known as wr
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/CircuitDiagrams/writesnm.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/writesnm.png)
 
 **Simulation Waveform :**
 <dl>
@@ -261,11 +261,12 @@ The minimum voltage required to feed new value into the sram cell is known as wr
 $  ngspice writesnm.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SimulationWaveforms/Prelayout/writesnm.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/writesnm.png)
 
 On drawing the square of largest size  between two curves we get : Write SNM = 0.72V
 
-
+# Future Work
+* Creating Layouts and performing postlayout simulations.Configuring config file and adding above custom cells for OpenRAM.
 
 # Author
 * Deepak verma
