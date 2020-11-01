@@ -24,11 +24,7 @@ XM8 blbar bl 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
 
 *Test Pulses
 v1 bl 0 pulse(0 1.8 0ns 60ps 60ps 5ns 10ns)
-*v2 wl 0 pulse(1.8 1.8 0ns 60ps 60ps 5ns 10ns)
 v2 wl 0 dc 1.8v
-
-
-*Cload out 0 1fF
 
 
 **************
