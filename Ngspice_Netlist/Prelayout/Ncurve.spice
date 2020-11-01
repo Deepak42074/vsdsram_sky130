@@ -9,32 +9,24 @@ Vdd vdd 0 {supl}
 
 * Cross-coupled transistors
 XM1 q qbar vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
-XM2 q qbar 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM2 q qbar 0 0 sky130_fd_pr__nfet_01v8 w=.84 l=.15 m=1
 XM3 qbar q vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
-XM4 qbar q 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM4 qbar q 0 0 sky130_fd_pr__nfet_01v8 w=.84 l=.15 m=1
 
 *Access Transistors
 XM5 bl wl q 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
 XM6 blbar wl qbar 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
 
-
-****
-XM7 blbar bl vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
-XM8 blbar bl 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
-
 *Test Pulses
-v1 bl 0 pulse(0 1.8 0ns 60ps 60ps 5ns 10ns)
-v2 wl 0 dc 1.8v
+vin q 0 dc 1.8v
+vwl wl 0 dc 1.8v
+vbl bl 0 dc 1.8v
+v2 blbar 0 dc 1.8v
 
 
-**************
-.tran 1e-09 20e-09 0e-00
+.dc vin 0 1.8 0.01
 .control
 run 
-plot wl bl-2 blbar-4 q-6 qbar-8
-
-
-
+plot -I(vin)
+.endc
 .end
-
-
