@@ -176,7 +176,7 @@ $  ngspice Dff.spice
 </dl>
  
 ```
-$  ngspice 1bit_sram_read.png
+$  ngspice 1bit_sram_read.spice
 ```
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/1bit_sram_read.png)
@@ -188,7 +188,7 @@ $  ngspice 1bit_sram_read.png
 </dl>
  
 ```
-$  ngspice 1bit_write_read.png
+$  ngspice 1bit_write_read.spice
 ```
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/1bit_sram_write.png)
