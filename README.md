@@ -291,13 +291,21 @@ $  ngspice Ncurve.spice
 The four parameters A,B,C,D on above plot of Ncurve  define the stability of 6T-SRAM cell.
 
 1. Static Voltage Noise Margin(SVNM) : It is the maximum DC voltage at the node Q before its state flips.It is the volatge difference between point A and C.
+
     SVNM = V(C) - V(A) = 0.84 - 0.18 = 0.66V
+    
 2. Static Current Noise Margin (SINM) : It is the peak current between first two crossing and it is the maximum tolerable DC current that can be injected into the SRAM cell     before its flip.
+
     SINM = I(B) = ~299 uA
+    
 3. Write Trip Voltage(WTV) : It is the voltage required before changing the contents of the internal node.It is the voltage difference between netween point C and E.
-    WTV = V(E) - V(C) = 1.8 - 0.84 = 0.97
+   
+   WTV = V(E) - V(C) = 1.8 - 0.84 = 0.97
+   
 4. Write Trip Current(WTI) : It is the negative current which si needed to write the cell.
-    WTI = I(D) = ~(-48 uA)
+   
+   WTI = I(D) = ~(-48 uA)
+   
 In Ncurve point A and E are stable points and point C is metastable point.
 
 
