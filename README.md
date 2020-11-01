@@ -302,7 +302,7 @@ The four parameters A,B,C,D on above plot of Ncurve  define the stability of 6T-
    
    WTV = V(E) - V(C) = 1.8 - 0.84 = 0.97
    
-4. Write Trip Current(WTI) : It is the negative current which si needed to write the cell.
+4. Write Trip Current(WTI) : It is the negative current which is needed to write the cell.
    
    WTI = I(D) = ~(-48 uA)
    
