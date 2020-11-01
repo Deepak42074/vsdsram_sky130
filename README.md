@@ -193,7 +193,10 @@ $  ngspice 1bit_write_read.png
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/1bit_sram_write.png)
 
-## Static Noise Margin Calculation of 6T sram cell
+## Stability Analysis of 6T-SRAM cell : 
+The stability analysis of 6T- SRAm cell can be defined by butterfly curve and Ncurve methods.
+
+### Static Noise Margin Calculation of 6T sram cell using Butterfly method:
 SNM is defined as minimum DC noise voltage needed to flip the cell state .It shows the stability of sram cell,used to measure the robustness of a cell which shows how well it can hold its data.
 To find SNM we draw inverter charactersitics and its mirror characteristics. The resulting two lobe curves is called "Butterfly curve".
 The SNM is defined as the length of side of largest square that can be drawn inside the lobes of butterfly curve.
@@ -265,8 +268,42 @@ $  ngspice writesnm.spice
 
 On drawing the square of largest size  between two curves we get : Write SNM = 0.72V
 
+### Stability Analysis by Ncurve method:
+
+Butterfly curve has some drawbacks like different analysis is required for write and read SNM ,do not provide any information regarding current flow in the cell.
+All these drawbacks are overcome by Ncurve method. Ncurve provides read and write stabilities in single plot.
+
+**Circuit Diagram**
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Ncurve.png)
+
+**Simulation Waveform :**
+<dl>
+  <dd> Type below command in Prelayout directory </dd>
+</dl>
+
+```
+$  ngspice Ncurve.spice
+```
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Ncurve.png)
+
+The four parameters A,B,C,D on above plot of Ncurve  define the stability of 6T-SRAM cell.
+
+1. Static Voltage Noise Margin(SVNM) : It is the maximum DC voltage at the node Q before its state flips.It is the volatge difference between point A and C.
+    SVNM = V(C) - V(A) = 0.84 - 0.18 = 0.66V
+2. Static Current Noise Margin (SINM) : It is the peak current between first two crossing and it is the maximum tolerable DC current that can be injected into the SRAM cell     before its flip.
+    SINM = I(B) = ~299 uA
+3. Write Trip Voltage(WTV) : It is the voltage required before changing the contents of the internal node.It is the voltage difference between netween point C and E.
+    WTV = V(E) - V(C) = 1.8 - 0.84 = 0.97
+4. Write Trip Current(WTI) : It is the negative current which si needed to write the cell.
+    WTI = I(D) = ~(-48 uA)
+In Ncurve point A and E are stable points and point C is metastable point.
+
+
+
 # Future Work
-* Creating Layouts and performing postlayout simulations.Configuring config file and adding above custom cells for OpenRAM.
+* Creating Layouts and performing postlayout simulations.Configuring OpenRAM with Sky130 pdk and adding above custom cells for compilation..
 
 # Author
 * Deepak verma
