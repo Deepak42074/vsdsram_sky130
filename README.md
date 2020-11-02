@@ -25,7 +25,7 @@ Please follow below instructions :(For Ubuntu users)
 ```
 $  sudo apt install git
 $  git clone https://github.com/Deepak42074/VSD_SRAM.git
-$  cd VSD_SRAM
+$  cd vsd_sram_sky130
 $  chmod +777 install_and_clone.sh
 $  ./install_and_clone.sh
 
