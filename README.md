@@ -37,7 +37,7 @@ Note: Running script install_and_clone.sh will install ngspice tool and clone to
 </dl>
 
 ```
-$    cd VSD_SRAM/Ngspice_Netlist/Prelayout/ 
+$    cd vsd_sram_sky130/Ngspice_Netlist/Prelayout/ 
 $    ngspice inv.spice 
 ```
 
