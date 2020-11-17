@@ -18,8 +18,8 @@ XM5 q wl bl 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
 XM6 qbar wl blbar 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
 
 *Precharge ckt part
-XM7 bl 0 vdd vdd sky130_fd_pr__pfet_01v8 w=.84 l=.15 m=1
-XM8 blbar 0 vdd vdd sky130_fd_pr__pfet_01v8 w=.84 l=.15 m=1
+XM7 bl 0 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM8 blbar 0 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
 
 
 
