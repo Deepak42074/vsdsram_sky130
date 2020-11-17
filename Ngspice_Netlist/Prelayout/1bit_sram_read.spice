@@ -1,0 +1,79 @@
+*Model Description
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+* Cross-coupled transistors
+XM1 q qbar vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM2 q qbar 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM3 qbar q vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM4 qbar q 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*Access Transistors
+XM5 q wl bl 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM6 qbar wl blbar 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*Precharge ckt part
+XM7 bl 0 vdd vdd sky130_fd_pr__pfet_01v8 w=.84 l=.15 m=1
+XM8 blbar 0 vdd vdd sky130_fd_pr__pfet_01v8 w=.84 l=.15 m=1
+
+
+
+* Sense Amplifier 
+XM9 dout1 bl 3 3 sky130_fd_pr__nfet_01v8 w=.84 l=.15 m=1
+XM10 2 blbar 3 3 sky130_fd_pr__nfet_01v8 w=.84 l=.15 m=1
+XM11 dout1 2 vdd vdd sky130_fd_pr__pfet_01v8 w=.84 l=.15 m=1
+XM12 2 2 vdd vdd sky130_fd_pr__pfet_01v8 w=.84 l=.15 m=1
+XM13 3 ren 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+XM14 dout dout1 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM15 dout dout1 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+
+
+
+* Write driver...............
+*inv1
+XM16 dinb din vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM17 dinb din 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+*inv2
+XM18 dinbb dinb vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM19 dinbb dinb 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*XNOR1
+XM20 4 dinb vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM21 out1 wen 4 4  sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM22 out1 dinb 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM23 out1 wen 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*XNOR2
+XM24 5 dinbb vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM25 out2 wen 5 5  sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM26 out2 dinbb 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM27 out2 wen 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+XM28 blbar out1 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+XM29 bl out2 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+
+*Test Pulses
+vwl wl 0 pulse(0 1.8 0ns 60ps 60ps 5ns 10ns)
+Vq q 0 pulse(0 1.8 0 60ps 60ps 1ns 2ns)
+vren ren 0 pulse(0 1.8 0ns 60ps 60ps 5ns 10ns)
+vwen wen 0 dc 1.8v
+Vdin din 0 dc 0v
+
+
+.tran 0.1p 20n 
+.control
+run 
+plot ren+12 dout bl+5 blbar+2 q+10 qbar+8
+
+.endc
+.end
+
+
