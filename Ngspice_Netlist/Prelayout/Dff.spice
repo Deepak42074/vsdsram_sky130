@@ -36,8 +36,8 @@ XM15 4 clk 5 vdd sky130_fd_pr__pfet_01v8 l=0.15 w=0.55
 XM16 4 clkbar 5 0 sky130_fd_pr__nfet_01v8 l=0.15 w=0.42
 
 *InvClk
-XMP1 clkbar clk vdd vdd sky130_fd_pr__pfet_01v8 w=1.05 l=.15 m=1
-XMN1 clkbar clk 0 0 sky130_fd_pr__nfet_01v8 w=.84 l=.15 m=1
+XMP1 clkbar clk vdd vdd sky130_fd_pr__pfet_01v8 w=.55 l=.15 m=1
+XMN1 clkbar clk 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
 
 Vdin din 0 pulse(0 1.8 2.5ns 60ps 60ps 15ns 30ns)
 Vclk clk 0 pulse(0 1.8 0 60ps 60ps 5ns 10ns)
