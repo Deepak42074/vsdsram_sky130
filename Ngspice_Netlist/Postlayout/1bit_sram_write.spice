@@ -1,0 +1,184 @@
+* NGSPICE file created from 1bit_sram_write.ext - technology: sky130A
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+.subckt Differential_sense_amplifier ren bl 3 dout gnd blbar vdd
+X0 2 2 vdd vdd sky130_fd_pr__pfet_01v8 w=840000u l=150000u
+X1 dout1 bl 3 gnd sky130_fd_pr__nfet_01v8 w=840000u l=150000u
+X2 dout dout1 vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X3 dout1 2 vdd vdd sky130_fd_pr__pfet_01v8 w=840000u l=150000u
+X4 2 blbar 3 gnd sky130_fd_pr__nfet_01v8 w=840000u l=150000u
+X5 dout dout1 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X6 3 ren gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+C0 dout1 bl 0.02fF
+C1 2 3 0.02fF
+C2 bl 2 0.01fF
+C3 bl 3 0.01fF
+C4 dout1 dout 0.07fF
+C5 dout1 vdd 0.13fF
+C6 vdd 2 0.11fF
+C7 ren blbar 0.05fF
+C8 vdd 3 0.01fF
+C9 dout bl 0.02fF
+C10 blbar 2 0.01fF
+C11 blbar 3 0.06fF
+C12 blbar bl 0.01fF
+C13 ren 2 0.01fF
+C14 dout1 2 0.07fF
+C15 dout vdd 0.05fF
+C16 ren 3 0.02fF
+C17 dout1 3 0.05fF
+C18 ren gnd 0.39fF
+C19 3 gnd 0.35fF
+C20 bl gnd 0.42fF
+C21 blbar gnd 0.32fF
+C22 dout gnd 0.21fF
+C23 dout1 gnd 0.56fF
+C24 2 gnd 0.52fF
+C25 vdd gnd 1.60fF
+.ends
+
+.subckt write_driver out1 out2 bl wen gnd din blbar vdd
+X0 dinbb dinb vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X1 blbar out1 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X2 dinb din vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X3 out1 wen gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 out2 wen gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X5 dinb din gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X6 dinbb dinb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X7 out2 wen 5 vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X8 out2 dinbb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X9 5 dinbb vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X10 out1 wen 4 vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X11 4 dinb vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X12 bl out2 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X13 out1 dinb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+C0 vdd dinb 0.10fF
+C1 out2 dinbb 0.01fF
+C2 out1 wen 0.06fF
+C3 dinbb wen 0.03fF
+C4 vdd out2 0.01fF
+C5 vdd 5 0.06fF
+C6 5 4 0.03fF
+C7 vdd out1 0.01fF
+C8 vdd din 0.00fF
+C9 out1 4 0.11fF
+C10 out1 dinb 0.01fF
+C11 vdd dinbb 0.07fF
+C12 out1 blbar 0.01fF
+C13 dinb din 0.06fF
+C14 out2 bl 0.02fF
+C15 dinb wen 0.02fF
+C16 dinb dinbb 0.05fF
+C17 out2 5 0.09fF
+C18 out1 out2 0.01fF
+C19 vdd 4 0.07fF
+C20 out2 wen 0.05fF
+C21 blbar gnd 0.20fF
+C22 out1 gnd 0.71fF
+C23 4 gnd 0.16fF
+C24 5 gnd 0.15fF
+C25 din gnd 0.43fF
+C26 bl gnd 0.19fF
+C27 out2 gnd 0.67fF
+C28 wen gnd 0.81fF
+C29 dinbb gnd 0.77fF
+C30 dinb gnd 1.45fF
+C31 vdd gnd 2.06fF
+.ends
+
+.subckt T_sram_cell q bl qbar gnd wl blbar vdd
+X0 qbar wl blbar gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X1 qbar q vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X2 q qbar vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X3 q qbar gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 qbar q gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X5 q wl bl gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+C0 q bl 0.35fF
+C1 qbar q 0.32fF
+C2 wl q 0.01fF
+C3 q vdd 0.16fF
+C4 wl bl 0.01fF
+C5 blbar bl 0.01fF
+C6 vdd bl 0.09fF
+C7 wl qbar 0.00fF
+C8 blbar qbar 0.08fF
+C9 qbar vdd 0.12fF
+C10 wl blbar 0.02fF
+C11 blbar vdd 0.07fF
+C12 blbar gnd 0.12fF
+C13 bl gnd 0.09fF
+C14 wl gnd 0.36fF
+C15 q gnd 0.09fF
+C16 qbar gnd 0.95fF
+C17 vdd gnd 0.96fF
+.ends
+
+.subckt Prechargecell VSUBS bl gnd blbar vdd
+X0 blbar gnd vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X1 bl gnd vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+C0 bl blbar 0.01fF
+C1 bl vdd 0.05fF
+C2 gnd bl 0.03fF
+C3 vdd blbar 0.05fF
+C4 gnd blbar 0.02fF
+C5 gnd vdd 0.04fF
+C6 blbar VSUBS 0.05fF
+C7 bl VSUBS 0.07fF
+C8 gnd VSUBS 0.56fF
+C9 vdd VSUBS 1.17fF
+.ends
+
+
+* Top level circuit 1bit_sram_write
+
+XDifferential_sense_amplifier_0 ren bl Differential_sense_amplifier_0/3 dout gnd blbar
++ vdd Differential_sense_amplifier
+Xwrite_driver_0 write_driver_0/out1 write_driver_0/out2 bl wen gnd din blbar vdd write_driver
+X6T_sram_cell_0 q bl qbar gnd wl blbar vdd T_sram_cell
+XPrechargecell_0 gnd bl gnd blbar vdd Prechargecell
+C0 q bl 0.01fF
+C1 write_driver_0/out1 wen 0.00fF
+C2 blbar qbar 0.05fF
+C3 write_driver_0/out2 wen 0.00fF
+C4 blbar Differential_sense_amplifier_0/3 0.01fF
+C5 dout bl 0.00fF
+C6 blbar ren 0.00fF
+C7 vdd Differential_sense_amplifier_0/3 0.01fF
+C8 blbar bl 0.00fF
+C9 blbar vdd 0.02fF
+C10 vdd bl 0.03fF
+C11 din vdd 0.01fF
+C12 wen wl 0.00fF
+C13 wl gnd -0.01fF
+C14 q gnd -0.33fF
+C15 qbar gnd -0.23fF
+C16 blbar gnd 0.83fF
+C17 din gnd 0.06fF
+C18 bl gnd 0.74fF
+C19 wen gnd -0.67fF
+C20 vdd gnd 0.48fF
+C21 ren gnd 0.07fF
+C22 Differential_sense_amplifier_0/3 gnd -0.00fF
+C23 dout gnd -0.04fF
+
+*Test Pulses
+vwl wl 0 pulse(0 1.8 0ns 60ps 60ps 5ns 10ns)
+vwen wen 0 pulse(1.8 0 0 60ps 60ps 5ns 10ns)
+Vdin din 0 pulse(0 1.8 0 60ps 60ps 1ns 2ns)
+vren ren 0 dc 0
+
+
+.tran 0.1p 20n 
+.control
+run 
+plot bl+6 blbar+4 q+2 qbar wen+10 din+8
+
+.endc
+.end
+
