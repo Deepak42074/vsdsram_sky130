@@ -1,0 +1,53 @@
+* NGSPICE file created from 6T_sram_cell.ext - technology: sky130A
+
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+* Top level circuit 6T_sram_cell
+
+X0 qbar wl blbar gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X1 qbar q vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X2 q qbar vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X3 q qbar gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 qbar q gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X5 q wl bl gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+C0 bl wl 0.01fF
+C1 blbar qbar 0.08fF
+C2 vdd q 0.16fF
+C3 blbar bl 0.01fF
+C4 blbar vdd 0.07fF
+C5 wl q 0.01fF
+C6 qbar vdd 0.12fF
+C7 bl vdd 0.09fF
+C8 qbar q 0.32fF
+C9 blbar wl 0.02fF
+C10 bl q 0.35fF
+C11 wl qbar 0.00fF
+C12 blbar gnd 0.12fF
+C13 bl gnd 0.09fF
+C14 wl gnd 0.36fF
+C15 q gnd 1.08fF
+C16 qbar gnd 0.95fF
+C17 vdd gnd 0.96fF
+
+****For simulation purpose
+XM7 blbar bl vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM8 blbar bl 0 0 sky130_fd_pr__nfet_01v8 w=.42 l=.15 m=1
+
+*Test Pulses
+v1 bl 0 pulse(0 1.8 0ns 60ps 60ps 5ns 10ns)
+v2 wl 0 dc 1.8v
+
+
+.tran 1e-09 20e-09 0e-00
+.control
+run 
+plot wl bl-2 blbar-4 q-6 qbar-8
+
+.end
+
+
