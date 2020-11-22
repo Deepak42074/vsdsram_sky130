@@ -4,7 +4,17 @@ and access time of less than 2.5ns using opensource Google-skywater(sky130) pdk 
 opensource compiler openRAM.The circuits(custom cells) which are required as input to openRAM 
 are designed and simluated using opensource tools.
 
+# Table of Contents  
+- [Opensource Tools used](#Opensource-Tools-used)  
+- [Installing and Cloning Instructions](#Installing-and-Cloning-Instructions)  
+- [SRAM Memory Architecture](##SRAM-Memory-Architecture)
+- [Inputs to OpenRAM compiler](##Inputs-to-OpenRAM-compiler) 
+- [Layouts and Postlayout Simulation waveforms](#Layouts and Postlayout Simulation waveforms)
+- [Stability Analysis of 6T-SRAM cell](##Stability-Analysis-of-6T-SRAM-cell)
 
+- [Future Work](#future-work)  
+- [Acknowledgements](#acknowledgements)  
+- [Contact Information](#contact-information) 
 # Opensource Tools used:
 
 1. Ngspice : Ngspice is an opensource spice simulator for electric and electronic circuits.For more info regarding ngspice installation and tutorial follow http://ngspice.sourceforge.net/ngspice-tutorial.html .
@@ -14,7 +24,7 @@ https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-start
 
 NOTE: Any other schematic drawing tool can be used in place of xschem. Here installation of xschem is not required for running this project on your machine.
 
-## Installing and Cloning Instructions
+# Installing and Cloning Instructions
 
 Please follow below instructions :(For Ubuntu users)
 <dl>
@@ -58,7 +68,7 @@ Custom cells required:
 * Tristate Buffer
 * D-flip flop
 
-# Prelayout Schematic and Simulation waveforms:
+# Prelayout Schematic and Simulation waveforms
 The Schematics are drawn using opensource xschem tool and simulation is performed using Ngspice,both are configured with sky130 library.
 
 
@@ -87,7 +97,6 @@ $  ngspice 6T_sram_cell.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Prechargecell.png)
 
-Here we have used M3 as equalizer to reduce power consumption and faster operation.
 
 **Simulation Waveform :**
 <dl>
@@ -193,7 +202,7 @@ $  ngspice 1bit_write_read.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/1bit_sram_write.png)
 
-## Stability Analysis of 6T-SRAM cell : 
+## Stability Analysis of 6T-SRAM cell 
 The stability analysis of 6T- SRAm cell can be defined by butterfly curve and Ncurve methods.
 
 ### Static Noise Margin Calculation of 6T sram cell using Butterfly method:
@@ -308,15 +317,13 @@ The four parameters A,B,C,D on above plot of Ncurve  define the stability of 6T-
    
 In Ncurve point A and E are stable points and point C is metastable point.
 
-# Prelayout Schematic and Simulation waveforms:
+# Layouts and Postlayout Simulation waveforms
 The layouts are drawn using magic tool and sky130A.tech file , simulation is performed using Ngspice.
 
 ####################################################################
 ## 1. 6T_SRAM cell 
-The standard 1-bit 6T - SRAM cell consists of 6 transistors. It has pair of cross-coupled CMOS inverters and two NMOS access transistors(M5, M6). 
-The NMOS transistors (M2, M4) and PMOS transistors(M1,M3) are driver and pull up transistors respectively.
 
-**Circuit Diagram :**
+**Layout :**
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/6T_sram_cell.png)
 
@@ -331,13 +338,6 @@ $  ngspice 6T_sram_cell.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/6T_sram_cell.png)
 
-## 2. Precharge circuit
-
-**Circuit Diagram :**
-
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Prechargecell.png)
-
-Here we have used M3 as equalizer to reduce power consumption and faster operation.
 
 **Simulation Waveform :**
 <dl>
@@ -350,9 +350,9 @@ $  ngspice Prechargecell.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Prechargecell.png)
 
-## 3. Differential Sense Amplifier
+## 2. Differential Sense Amplifier
 
-**Circuit Diagram :**
+**Layout :**
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Differential_sense_amplifier.png)
 
@@ -369,7 +369,7 @@ $  ngspice Differential_sense_amplifier.spice
 
 ## 4. Write Driver Circuit
 
-**Circuit Diagram :**
+**Layout :**
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/write_driver.png)
 
@@ -386,7 +386,7 @@ $  ngspice writedriver.spice
 
 ## 5. Tristate Buffer
 
-**Circuit Diagram :**
+**Layout :**
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Tristate_buffer.png)
 
@@ -403,7 +403,7 @@ $  ngspice Tristate_buffer.spice
 
 ## 6. Positive Edge Triggered D flip flop
 
-**Circuit Diagram :**
+**Layout :**
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Dff.png)
 
@@ -418,7 +418,9 @@ $  ngspice Dff.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Dff.png)
 
-## 7. 1bit_sram_read 
+## 7. 1bit_sram
+
+**1bit_sram_read**
 
 **Simulation Waveform :**
 <dl>
@@ -431,7 +433,8 @@ $  ngspice 1bit_sram_read.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/1bit_sram_read.png)
 
-## 8. 1bit_sram_write 
+**1bit_sram_write**
+
 **Simulation Waveform :**
 <dl>
   <dd> Type below command in Prelayout directory </dd>
