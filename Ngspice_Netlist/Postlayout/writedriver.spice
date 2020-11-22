@@ -1,0 +1,76 @@
+* NGSPICE file created from write_driver.ext - technology: sky130A
+
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+*Precharge ckt part for simulation purpose only
+XM1 bl 0 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+XM2 blbar 0 vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
+
+* Top level circuit write_driver
+
+X0 dinbb dinb vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X1 blbar out1 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X2 dinb din vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X3 out1 wen gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 out2 wen gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X5 dinb din gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X6 dinbb dinb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X7 out2 wen 5 vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X8 out2 dinbb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X9 5 dinbb vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X10 out1 wen 4 vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X11 4 dinb vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X12 bl out2 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X13 out1 dinb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+C0 5 4 0.03fF
+C1 out2 wen 0.05fF
+C2 out2 5 0.09fF
+C3 dinb wen 0.02fF
+C4 blbar out1 0.01fF
+C5 vdd 4 0.07fF
+C6 dinbb wen 0.03fF
+C7 5 vdd 0.06fF
+C8 out1 wen 0.06fF
+C9 out1 4 0.11fF
+C10 out2 vdd 0.01fF
+C11 out2 dinbb 0.01fF
+C12 bl out2 0.02fF
+C13 out2 out1 0.01fF
+C14 din vdd 0.00fF
+C15 dinb vdd 0.10fF
+C16 din dinb 0.06fF
+C17 dinbb vdd 0.07fF
+C18 dinb dinbb 0.05fF
+C19 out1 vdd 0.01fF
+C20 dinb out1 0.01fF
+C21 blbar gnd 0.20fF
+C22 out1 gnd 0.71fF
+C23 4 gnd 0.16fF
+C24 5 gnd 0.15fF
+C25 din gnd 0.43fF
+C26 bl gnd 0.19fF
+C27 out2 gnd 0.67fF
+C28 wen gnd 0.81fF
+C29 dinbb gnd 0.77fF
+C30 dinb gnd 1.45fF
+C31 vdd gnd 2.06fF
+
+Vwen wen 0 pulse(0 1.8 0 60ps 60ps 2ns 4ns)
+Vdin din 0 pulse(0 1.8 0 60ps 60ps 0.5ns 1ns)
+
+
+.tran 0.1p 10n
+.control
+run 
+plot wen+6 din+4 bl+2 blbar
+
+.endc
+.end
+
+
