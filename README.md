@@ -321,7 +321,7 @@ The four parameters A,B,C,D on above plot of Ncurve  define the stability of 6T-
 In Ncurve point A and E are stable points and point C is metastable point.
 
 # Layouts and Postlayout Simulation waveforms
-The layouts are drawn using magic tool and sky130A.tech file , simulation is performed using Ngspice.
+The layouts are drawn using magic tool and sky130A.tech file ,simulation is performed using Ngspice.
 
 ## 1. 6T_SRAM cell 
 
@@ -438,7 +438,7 @@ $  ngspice 1bit_write_read.spice
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/1bit_sram_write.png)
 
 # Future Work
-* Creating Layouts and performing postlayout simulations.Configuring OpenRAM with Sky130 pdk and adding above custom cells for compilation..
+* Configuring OpenRAM with Sky130 pdk and compiling SRAM with openRAM.
 
 # Author
 * Deepak verma
