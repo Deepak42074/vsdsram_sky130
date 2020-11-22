@@ -11,8 +11,8 @@ are designed and simluated using opensource tools.
 - [Inputs to OpenRAM compiler](##Inputs-to-OpenRAM-compiler)
 - [Stability Analysis of 6T-SRAM cell](##Stability-Analysis-of-6T-SRAM-cell)
 - [Layouts and Postlayout Simulation waveforms](#Layouts-and-Postlayout-Simulation-waveforms)
+- [Future Work](#future-work) 
 - [Author](#Author)
-- [Future Work](#future-work)  
 - [Acknowledgements](#Acknowledgements)  
 - [Contact Information](#Contact-information) 
 
