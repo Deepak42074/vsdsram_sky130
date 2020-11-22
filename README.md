@@ -161,7 +161,7 @@ $  ngspice writedriver.spice
 $  ngspice Tristate_buffer.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SSimulation_Waveform/Prelayout/Tristate_buffer.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Tristate_buffer.png)
 
 ## 6. Positive Edge Triggered D flip flop
 
