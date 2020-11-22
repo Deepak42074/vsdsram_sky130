@@ -7,7 +7,6 @@
 
 Vdd vdd 0 {supl}
 
-* Cross-coupled transistors
 XM1 bl pclk vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
 XM2 blbar pclk vdd vdd sky130_fd_pr__pfet_01v8 w=.42 l=.15 m=1
 
