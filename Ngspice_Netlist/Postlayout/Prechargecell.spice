@@ -1,0 +1,19 @@
+* NGSPICE file created from Prechargecell.ext - technology: sky130A
+
+
+* Top level circuit Prechargecell
+
+X0 blbar gnd vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X1 bl gnd vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+C0 vdd gnd 0.04fF
+C1 gnd blbar 0.02fF
+C2 bl gnd 0.03fF
+C3 vdd blbar 0.05fF
+C4 bl vdd 0.05fF
+C5 bl blbar 0.01fF
+C6 blbar VSUBS 0.05fF
+C7 bl VSUBS 0.07fF
+C8 gnd VSUBS 0.56fF
+C9 vdd VSUBS 1.17fF
+.end
+
