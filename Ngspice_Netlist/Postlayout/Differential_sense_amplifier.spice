@@ -1,0 +1,59 @@
+* NGSPICE file created from Differential_sense_amplifier.ext - technology: sky130A
+
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+* Top level circuit Differential_sense_amplifier
+
+X0 2 2 vdd vdd sky130_fd_pr__pfet_01v8 w=840000u l=150000u
+X1 dout1 bl 3 gnd sky130_fd_pr__nfet_01v8 w=840000u l=150000u
+X2 dout dout1 vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X3 dout1 2 vdd vdd sky130_fd_pr__pfet_01v8 w=840000u l=150000u
+X4 2 blbar 3 gnd sky130_fd_pr__nfet_01v8 w=840000u l=150000u
+X5 dout dout1 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X6 3 ren gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+C0 3 2 0.02fF
+C1 blbar bl 0.01fF
+C2 dout1 3 0.05fF
+C3 bl 3 0.01fF
+C4 blbar 3 0.06fF
+C5 3 vdd 0.01fF
+C6 ren 2 0.01fF
+C7 dout1 dout 0.07fF
+C8 dout1 2 0.07fF
+C9 bl dout 0.02fF
+C10 blbar ren 0.05fF
+C11 bl 2 0.01fF
+C12 dout1 bl 0.02fF
+C13 blbar 2 0.01fF
+C14 dout vdd 0.05fF
+C15 ren 3 0.02fF
+C16 vdd 2 0.11fF
+C17 dout1 vdd 0.13fF
+C18 ren gnd 0.39fF
+C19 3 gnd 0.35fF
+C20 bl gnd 0.42fF
+C21 blbar gnd 0.32fF
+C22 dout gnd 0.21fF
+C23 dout1 gnd 0.56fF
+C24 2 gnd 0.52fF
+C25 vdd gnd 1.60fF
+
+
+v1 bl 0 pulse(0 1.8 0 60ps 60ps 1ns 2ns)
+v2 blbar 0 pulse(1.8 0 0 60ps 60ps 1ns 2ns)
+v3 ren 0 pulse(0 1.8 0 60ps 60ps 5ns 10ns)
+
+
+.tran 0.1p 20n
+.control
+run
+plot ren+6 bl+4 blbar+2 dout
+.endc
+.end
+
