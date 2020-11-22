@@ -8,19 +8,22 @@ are designed and simluated using opensource tools.
 - [Opensource Tools used](#Opensource-Tools-used)  
 - [Installing and Cloning Instructions](#Installing-and-Cloning-Instructions)  
 - [SRAM Memory Architecture](##SRAM-Memory-Architecture)
-- [Inputs to OpenRAM compiler](##Inputs-to-OpenRAM-compiler) 
-- [Layouts and Postlayout Simulation waveforms](#Layouts-and-Postlayout-Simulation-waveforms)
+- [Inputs to OpenRAM compiler](##Inputs-to-OpenRAM-compiler)
 - [Stability Analysis of 6T-SRAM cell](##Stability-Analysis-of-6T-SRAM-cell)
-
+- [Layouts and Postlayout Simulation waveforms](#Layouts-and-Postlayout-Simulation-waveforms)
+- [Author](#Author)
 - [Future Work](#future-work)  
-- [Acknowledgements](#acknowledgements)  
-- [Contact Information](#contact-information) 
+- [Acknowledgements](#Acknowledgements)  
+- [Contact Information](#Contact-information) 
+
 # Opensource Tools used:
 
 1. Ngspice : Ngspice is an opensource spice simulator for electric and electronic circuits.For more info regarding ngspice installation and tutorial follow http://ngspice.sourceforge.net/ngspice-tutorial.html .
 
 2. xschem : An opensource source tool for drawing schematics.It allows hierarchical representation of circuits.For installation and configurin with sky130 follow :
 https://github.com/bluecmd/learn-sky130/blob/main/schematic/xschem/getting-started.md#installation-of-sky130-primitives-and-symbols .
+
+3. Magic: Magic is an opensource VLSI circuit layout design tool.For more information follow: http://opencircuitdesign.com/magic/ .
 
 NOTE: Any other schematic drawing tool can be used in place of xschem. Here installation of xschem is not required for running this project on your machine.
 
@@ -320,7 +323,6 @@ In Ncurve point A and E are stable points and point C is metastable point.
 # Layouts and Postlayout Simulation waveforms
 The layouts are drawn using magic tool and sky130A.tech file , simulation is performed using Ngspice.
 
-####################################################################
 ## 1. 6T_SRAM cell 
 
 **Layout :**
@@ -410,7 +412,7 @@ $  ngspice Dff.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/1bit_sram.png)
 
-**1bit_sram_read**
+**1bit_sram_read :**
 
 **Simulation Waveform :**
 <dl>
@@ -423,7 +425,7 @@ $  ngspice 1bit_sram_read.spice
 
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/1bit_sram_read.png)
 
-**1bit_sram_write**
+**1bit_sram_write :**
 
 **Simulation Waveform :**
 <dl>
@@ -434,7 +436,6 @@ $  ngspice 1bit_sram_read.spice
 $  ngspice 1bit_write_read.spice
 ```
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/1bit_sram_write.png)
-########################################################################################
 
 # Future Work
 * Creating Layouts and performing postlayout simulations.Configuring OpenRAM with Sky130 pdk and adding above custom cells for compilation..
@@ -449,7 +450,7 @@ $  ngspice 1bit_write_read.spice
 * Reuel Reuben, VSD Teaching Assistant  -reuel992000@gmail.com
 
 # Contact Information  
-* Deepak verma ,B.Tech(Electronics and Communication-2018),IIIT Sonepat -deepak074.verma@gmail.com
+* Deepak verma ,B.Tech(Electronics and Communication),IIIT Sonepat -deepak074.verma@gmail.com
 * Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. - kunalghosh@gmail.com
 * Philipp Gühring, Software Architect, LibreSilicon Assocation - pg@futureware.at
 
