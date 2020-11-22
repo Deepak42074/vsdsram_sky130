@@ -1,0 +1,85 @@
+* NGSPICE file created from Dff.ext - technology: sky130A
+
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 device model
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+* Top level circuit Dff
+
+X0 1 clk din vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X1 4 clkbar 5 gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X2 4 clkbar 2 vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X3 1 clk 3 gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 1 clkbar 3 vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X5 2 1 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X6 5 Q vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X7 1 clkbar din gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X8 Q 4 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X9 Q 4 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X10 4 clk 5 vdd sky130_fd_pr__pfet_01v8 w=550000u l=170000u
+X11 clkbar clk gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X12 4 clk 2 gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X13 clkbar clk vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X14 2 1 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X15 3 2 vdd vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+X16 3 2 gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X17 5 Q gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+C0 1 2 0.29fF
+C1 2 4 0.11fF
+C2 Q clk 0.03fF
+C3 clkbar clk 0.17fF
+C4 Q 4 0.15fF
+C5 5 Q 0.10fF
+C6 1 clkbar 0.84fF
+C7 clkbar 4 0.70fF
+C8 5 clkbar 0.17fF
+C9 3 2 0.18fF
+C10 3 clkbar 0.18fF
+C11 1 clk 0.06fF
+C12 din vdd 0.11fF
+C13 clk 4 0.03fF
+C14 1 4 0.07fF
+C15 5 4 0.20fF
+C16 2 vdd 1.00fF
+C17 3 1 0.20fF
+C18 3 4 0.01fF
+C19 Q vdd 0.13fF
+C20 clkbar vdd 0.33fF
+C21 clkbar din 0.43fF
+C22 clk vdd 0.02fF
+C23 Q 2 0.03fF
+C24 clkbar 2 0.44fF
+C25 1 vdd 0.11fF
+C26 4 vdd 0.10fF
+C27 5 vdd 0.07fF
+C28 din clk 0.05fF
+C29 clkbar Q 0.21fF
+C30 1 din 0.12fF
+C31 3 vdd 0.10fF
+C32 2 clk 0.03fF
+C33 5 gnd 0.40fF
+C34 3 gnd 0.18fF
+C35 din gnd 0.46fF
+C36 Q gnd 0.60fF
+C37 4 gnd 1.59fF
+C38 clkbar gnd 0.66fF
+C39 1 gnd 0.78fF
+C40 clk gnd 1.36fF
+C41 2 gnd 0.73fF
+C42 vdd gnd 2.92fF
+
+Vdin din 0 pulse(0 1.8 2.5ns 60ps 60ps 15ns 30ns)
+Vclk clk 0 pulse(0 1.8 0 60ps 60ps 5ns 10ns)
+
+.tran 0.1ns 100ns
+
+.control
+run 
+plot Q din+4 clk+8
+.endc
+.end
+
