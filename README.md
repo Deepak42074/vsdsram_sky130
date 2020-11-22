@@ -9,7 +9,7 @@ are designed and simluated using opensource tools.
 - [Installing and Cloning Instructions](#Installing-and-Cloning-Instructions)  
 - [SRAM Memory Architecture](##SRAM-Memory-Architecture)
 - [Inputs to OpenRAM compiler](##Inputs-to-OpenRAM-compiler) 
-- [Layouts and Postlayout Simulation waveforms](#Layouts and Postlayout Simulation waveforms)
+- [Layouts and Postlayout Simulation waveforms](#Layouts-and-Postlayout-Simulation-waveforms)
 - [Stability Analysis of 6T-SRAM cell](##Stability-Analysis-of-6T-SRAM-cell)
 
 - [Future Work](#future-work)  
@@ -130,7 +130,7 @@ $  ngspice Differential_sense_amplifier.spice
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/write_driver.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/writedriver.png)
 
 **Simulation Waveform :**
 <dl>
@@ -325,7 +325,7 @@ The layouts are drawn using magic tool and sky130A.tech file , simulation is per
 
 **Layout :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/6T_sram_cell.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/6T_sram_cell.png)
 
 **Simulation Waveform :**
 <dl>
@@ -336,25 +336,13 @@ The layouts are drawn using magic tool and sky130A.tech file , simulation is per
 $  ngspice 6T_sram_cell.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/6T_sram_cell.png)
-
-
-**Simulation Waveform :**
-<dl>
-  <dd> Type below command in Prelayout directory </dd>
-</dl>
-
-```
-$  ngspice Prechargecell.spice 
-```
-
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Prechargecell.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/6T_sram_cell.png)
 
 ## 2. Differential Sense Amplifier
 
 **Layout :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Differential_sense_amplifier.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/Differential_sense_amplifier.png)
 
 **Simulation Waveform :**
 <dl>
@@ -365,13 +353,13 @@ $  ngspice Prechargecell.spice
 $  ngspice Differential_sense_amplifier.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Differential_sense_amplifier.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/Differential_sense_amplifier.png)
 
-## 4. Write Driver Circuit
+## 3. Write Driver Circuit
 
 **Layout :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/write_driver.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/writedriver.png)
 
 **Simulation Waveform :**
 <dl>
@@ -382,68 +370,70 @@ $  ngspice Differential_sense_amplifier.spice
 $  ngspice writedriver.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/writedriver.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/writedriver.png)
 
-## 5. Tristate Buffer
+## 4. Tristate Buffer
 
 **Layout :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Tristate_buffer.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/Tristate_buffer.png)
 
 **Simulation Waveform :**
 <dl>
-  <dd> Type below command in Prelayout directory </dd>
+  <dd> Type below command in Postlayout directory </dd>
 </dl>
 
 ```
 $  ngspice Tristate_buffer.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/SSimulation_Waveform/Prelayout/Tristate_buffer.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/Tristate_buffer.png)
 
-## 6. Positive Edge Triggered D flip flop
+## 5. Positive Edge Triggered D flip flop
 
 **Layout :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Dff.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/Dff.png)
 
 **Simulation Waveform :**
 <dl>
-  <dd> Type below command in Prelayout directory </dd>
+  <dd> Type below command in Postlayout directory </dd>
 </dl>
  
 ```
 $  ngspice Dff.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Dff.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/Dff.png)
 
-## 7. 1bit_sram
+## 6. 1bit_sram
+
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/1bit_sram.png)
 
 **1bit_sram_read**
 
 **Simulation Waveform :**
 <dl>
-  <dd> Type below command in Prelayout directory </dd>
+  <dd> Type below command in Postlayout directory </dd>
 </dl>
  
 ```
 $  ngspice 1bit_sram_read.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/1bit_sram_read.png)
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/1bit_sram_read.png)
 
 **1bit_sram_write**
 
 **Simulation Waveform :**
 <dl>
-  <dd> Type below command in Prelayout directory </dd>
+  <dd> Type below command in Postlayout directory </dd>
 </dl>
  
 ```
 $  ngspice 1bit_write_read.spice
 ```
-
+![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/1bit_sram_write.png)
 ########################################################################################
 
 # Future Work
