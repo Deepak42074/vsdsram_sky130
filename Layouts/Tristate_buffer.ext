@@ -1,0 +1,44 @@
+timestamp 1606209640
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 1e+06
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w
+parameters sky130_fd_pr__pfet_01v8 l=l w=w
+node "en" 399 204.891 1060 -87 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2197 290 0 0 1411 178 0 0 0 0 0 0 0 0 0 0 0 0
+node "out" 536 180.79 1073 -72 ndif 0 0 0 0 0 0 0 0 2365 196 2255 192 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4167 444 0 0 0 0 0 0 0 0 0 0 0 0
+node "enb" 415 209.488 1063 96 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2272 300 0 0 1411 178 0 0 0 0 0 0 0 0 0 0 0 0
+node "inb" 1215 626.181 775 -85 ndif 0 0 0 0 0 0 0 0 1806 170 1806 170 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4134 524 0 0 5928 646 0 0 0 0 0 0 0 0 0 0 0 0
+node "in" 746 357.004 722 -13 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4274 534 0 0 1523 186 0 0 0 0 0 0 0 0 0 0 0 0
+node "out1" 2180 769.515 918 -85 ndif 0 0 0 0 0 0 0 0 4116 364 4226 368 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8561 988 10194 744 0 0 0 0 0 0 0 0 0 0
+node "vdd" 7295 1963.42 681 16 nw 0 0 0 0 113318 1520 0 0 2295 338 3528 336 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6887 804 5600 498 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 718 -85 ndif 0 0 0 0 0 0 0 0 3528 336 2244 332 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6874 812 5400 482 0 0 0 0 0 0 0 0 0 0
+cap "out1" "out" 113.297
+cap "in" "vdd" 25.3923
+cap "out1" "en" 4.35165
+cap "out1" "in" 5.02174
+cap "inb" "enb" 1.26897
+cap "inb" "vdd" 94.0083
+cap "inb" "out" 5.22034
+cap "enb" "vdd" 1.6983
+cap "out1" "inb" 69.4266
+cap "inb" "en" 0.323944
+cap "vdd" "out" 7.32994
+cap "out1" "enb" 2.77895
+cap "in" "inb" 50.6437
+cap "out1" "vdd" 63.0182
+cap "enb" "en" 17.2547
+device msubckt sky130_fd_pr__nfet_01v8 1073 -87 1074 -86 l=15 w=55 "gnd" "en" 30 0 "out1" 55 0 "out" 55 0
+device msubckt sky130_fd_pr__nfet_01v8 903 -85 904 -84 l=15 w=42 "gnd" "inb" 30 0 "gnd" 42 0 "out1" 42 0
+device msubckt sky130_fd_pr__nfet_01v8 760 -85 761 -84 l=15 w=42 "gnd" "in" 30 0 "gnd" 42 0 "inb" 42 0
+device msubckt sky130_fd_pr__pfet_01v8 1076 96 1077 97 l=15 w=55 "vdd" "enb" 30 0 "out" 55 0 "out1" 55 0
+device msubckt sky130_fd_pr__pfet_01v8 903 61 904 62 l=15 w=42 "vdd" "inb" 30 0 "vdd" 42 0 "out1" 42 0
+device msubckt sky130_fd_pr__pfet_01v8 760 61 761 62 l=15 w=42 "vdd" "in" 30 0 "vdd" 42 0 "inb" 42 0
+subcap "en" -10.4661
+subcap "out" -3.22826
+subcap "enb" -18.7
+subcap "inb" -99.2344
+subcap "in" -38.6457
+subcap "out1" -45.9382
+subcap "gnd" -21.7184
