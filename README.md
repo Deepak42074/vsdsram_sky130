@@ -58,12 +58,12 @@ $    ngspice inv.spice
 
 ## SRAM Memory Architecture
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Others/SRAM_memory_architecture.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Others/SRAM_memory_architecture.png)
 
 ## Inputs to OpenRAM compiler
 Below images the show the inputs required to openRAM compiler:
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Others/Openram_Compiler.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Others/Openram_Compiler.png)
 
 Custom cells required:
 * SRAM bit cell
@@ -82,7 +82,7 @@ The NMOS transistors (M2, M4) and PMOS transistors(M1,M3) are driver and pull up
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/6T_sram_cell.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Schematics/6T_sram_cell.png)
 
 **Simulation Waveform :**
 <dl>
@@ -93,13 +93,13 @@ The NMOS transistors (M2, M4) and PMOS transistors(M1,M3) are driver and pull up
 $  ngspice 6T_sram_cell.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/6T_sram_cell.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/6T_sram_cell.png)
 
 ## 2. Precharge circuit
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Prechargecell.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Schematics/Prechargecell.png)
 
 
 **Simulation Waveform :**
@@ -111,13 +111,13 @@ $  ngspice 6T_sram_cell.spice
 $  ngspice Prechargecell.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Prechargecell.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/Prechargecell.png)
 
 ## 3. Differential Sense Amplifier
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Differential_sense_amplifier.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Schematics/Differential_sense_amplifier.png)
 
 **Simulation Waveform :**
 <dl>
@@ -128,13 +128,13 @@ $  ngspice Prechargecell.spice
 $  ngspice Differential_sense_amplifier.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Differential_sense_amplifier.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/Differential_sense_amplifier.png)
 
 ## 4. Write Driver Circuit
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/writedriver.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Schematics/writedriver.png)
 
 **Simulation Waveform :**
 <dl>
@@ -145,13 +145,13 @@ $  ngspice Differential_sense_amplifier.spice
 $  ngspice writedriver.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/writedriver.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/writedriver.png)
 
 ## 5. Tristate Buffer
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Tristate_buffer.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Schematics/Tristate_buffer.png)
 
 **Simulation Waveform :**
 <dl>
@@ -162,13 +162,13 @@ $  ngspice writedriver.spice
 $  ngspice Tristate_buffer.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Tristate_buffer.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/Tristate_buffer.png)
 
 ## 6. Positive Edge Triggered D flip flop
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Dff.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Schematics/Dff.png)
 
 **Simulation Waveform :**
 <dl>
@@ -179,7 +179,7 @@ $  ngspice Tristate_buffer.spice
 $  ngspice Dff.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Dff.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/Dff.png)
 
 ## 7. 1bit_sram_read 
 
@@ -192,7 +192,7 @@ $  ngspice Dff.spice
 $  ngspice 1bit_sram_read.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/1bit_sram_read.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/1bit_sram_read.png)
 
 ## 8. 1bit_sram_write 
 **Simulation Waveform :**
@@ -204,7 +204,7 @@ $  ngspice 1bit_sram_read.spice
 $  ngspice 1bit_write_read.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/1bit_sram_write.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/1bit_sram_write.png)
 
 ## Stability Analysis of 6T-SRAM cell 
 The stability analysis of 6T- SRAm cell can be defined by butterfly curve and Ncurve methods.
@@ -221,7 +221,7 @@ The ability of SRAM cell to retain the stored data in absence of word line is de
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Holdsnm.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Schematics/Holdsnm.png)
 
 **Simulation Waveform :**
 <dl>
@@ -232,7 +232,7 @@ The ability of SRAM cell to retain the stored data in absence of word line is de
 $  ngspice Holdsnm.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Holdsnm.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/Holdsnm.png)
 
 On drawing the square of largest size in the two lobes we get :
 Hold SNM = min(SNMH,SNML)= 0.71V
@@ -244,7 +244,7 @@ Read SNM is used to measure read ability which is the ability to prevent the sra
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Readsnm.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Schematics/Readsnm.png)
 
 **Simulation Waveform :**
 <dl>
@@ -255,7 +255,7 @@ Read SNM is used to measure read ability which is the ability to prevent the sra
 $  ngspice Readsnm.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Readsnm.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/Readsnm.png)
 
  On drawing the square of largest size between two curves we get: Read SNM = min(SNMH,SNML) 0.42V 
 
@@ -266,7 +266,7 @@ The minimum voltage required to feed new value into the sram cell is known as wr
 
 **Circuit Diagram :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/writesnm.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Schematics/writesnm.png)
 
 **Simulation Waveform :**
 <dl>
@@ -277,7 +277,7 @@ The minimum voltage required to feed new value into the sram cell is known as wr
 $  ngspice writesnm.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/writesnm.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/writesnm.png)
 
 On drawing the square of largest size  between two curves we get : Write SNM = 0.72V
 
@@ -288,7 +288,7 @@ All these drawbacks are overcome by Ncurve method. Ncurve provides read and writ
 
 **Circuit Diagram**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Schematics/Ncurve.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Schematics/Ncurve.png)
 
 **Simulation Waveform :**
 <dl>
@@ -299,7 +299,7 @@ All these drawbacks are overcome by Ncurve method. Ncurve provides read and writ
 $  ngspice Ncurve.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Prelayout/Ncurve.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Prelayout/Ncurve.png)
 
 The four parameters A,B,C,D on above plot of Ncurve  define the stability of 6T-SRAM cell.
 
@@ -328,7 +328,7 @@ The layouts are drawn using magic tool and sky130A.tech file ,simulation is perf
 
 **Layout :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/6T_sram_cell.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Layouts/6T_sram_cell.png)
 
 **Simulation Waveform :**
 <dl>
@@ -339,13 +339,13 @@ The layouts are drawn using magic tool and sky130A.tech file ,simulation is perf
 $  ngspice 6T_sram_cell.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/6T_sram_cell.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/6T_sram_cell.png)
 
 ## 2. Differential Sense Amplifier
 
 **Layout :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/Differential_sense_amplifier.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Layouts/Differential_sense_amplifier.png)
 
 **Simulation Waveform :**
 <dl>
@@ -356,13 +356,13 @@ $  ngspice 6T_sram_cell.spice
 $  ngspice Differential_sense_amplifier.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/Differential_sense_amplifier.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/Differential_sense_amplifier.png)
 
 ## 3. Write Driver Circuit
 
 **Layout :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/writedriver.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Layouts/writedriver.png)
 
 **Simulation Waveform :**
 <dl>
@@ -373,13 +373,13 @@ $  ngspice Differential_sense_amplifier.spice
 $  ngspice writedriver.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/writedriver.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/writedriver.png)
 
 ## 4. Tristate Buffer
 
 **Layout :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/Tristate_buffer.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Layouts/Tristate_buffer.png)
 
 **Simulation Waveform :**
 <dl>
@@ -390,13 +390,13 @@ $  ngspice writedriver.spice
 $  ngspice Tristate_buffer.spice 
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/Tristate_buffer.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/Tristate_buffer.png)
 
 ## 5. Positive Edge Triggered D flip flop
 
 **Layout :**
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/Dff.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Layouts/Dff.png)
 
 **Simulation Waveform :**
 <dl>
@@ -407,11 +407,11 @@ $  ngspice Tristate_buffer.spice
 $  ngspice Dff.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/Dff.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/Dff.png)
 
 ## 6. 1bit_sram
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Layouts/1bit_sram.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Layouts/1bit_sram.png)
 
 **1bit_sram_read :**
 
@@ -424,7 +424,7 @@ $  ngspice Dff.spice
 $  ngspice 1bit_sram_read.spice
 ```
 
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/1bit_sram_read.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/1bit_sram_read.png)
 
 **1bit_sram_write :**
 
@@ -436,7 +436,7 @@ $  ngspice 1bit_sram_read.spice
 ```
 $  ngspice 1bit_sram_write.spice
 ```
-![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/1bit_sram_write.png)
+![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/1bit_sram_write.png)
 
 # Future Work
 * Configuring OpenRAM with Sky130 pdk and compiling SRAM with openRAM.
@@ -449,6 +449,7 @@ $  ngspice 1bit_sram_write.spice
 * Philipp Gühring, Software Architect, LibreSilicon Assocation
 * Yash Kumar, VSD Teaching Assistant  - laryash99@gmail.com
 * Reuel Reuben, VSD Teaching Assistant  -reuel992000@gmail.com
+* Nickson Jose,, VSD Teaching Assistant
 
 # Contact Information  
 * Deepak verma ,B.Tech(Electronics and Communication),IIIT Sonepat -deepak074.verma@gmail.com
