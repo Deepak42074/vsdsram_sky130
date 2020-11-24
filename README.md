@@ -434,7 +434,7 @@ $  ngspice 1bit_sram_read.spice
 </dl>
  
 ```
-$  ngspice 1bit_write_read.spice
+$  ngspice 1bit_sram_write.spice
 ```
 ![](https://github.com/Deepak42074/VSD_SRAM/blob/main/Simulation_Waveform/Postlayout/1bit_sram_write.png)
 
