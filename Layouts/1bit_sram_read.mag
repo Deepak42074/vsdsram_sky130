@@ -1,0 +1,104 @@
+magic
+tech sky130A
+timestamp 1606001460
+<< nwell >>
+rect 1580 429 1584 478
+rect 1580 218 1583 279
+<< locali >>
+rect -16 641 38 658
+rect 1944 610 2015 627
+rect -23 491 4 508
+rect 1261 467 1278 527
+rect 1826 514 1879 531
+rect 1547 472 1584 489
+rect 1567 429 1584 472
+rect 2338 415 2367 432
+rect 1828 366 1858 383
+rect -13 341 40 358
+rect 642 327 780 344
+rect 876 323 912 341
+rect 1520 340 1552 357
+rect 1413 322 1451 340
+rect 1752 334 1778 352
+rect 1564 235 1583 279
+rect 1543 218 1583 235
+rect 1226 170 1243 209
+rect 1543 208 1564 218
+rect 1537 205 1564 208
+rect 1537 188 1540 205
+rect 1558 188 1564 205
+rect 1537 186 1564 188
+rect 1946 123 2002 140
+rect 2145 98 2162 145
+<< viali >>
+rect 1926 610 1944 627
+rect 1529 472 1547 489
+rect 1540 188 1558 205
+rect 1928 123 1946 140
+<< metal1 >>
+rect 1521 627 1952 632
+rect 1521 610 1926 627
+rect 1944 610 1952 627
+rect 1521 605 1952 610
+rect 734 511 764 599
+rect 1521 511 1546 605
+rect 734 483 955 511
+rect 1410 492 1546 511
+rect 1410 489 1564 492
+rect 1410 483 1529 489
+rect 1520 472 1529 483
+rect 1547 472 1564 489
+rect 1520 469 1564 472
+rect 1534 205 1565 208
+rect 726 177 952 205
+rect 1534 204 1540 205
+rect 1413 188 1540 204
+rect 1558 188 1565 205
+rect 1413 183 1565 188
+rect 1413 177 1545 183
+rect 726 103 753 177
+rect 1520 144 1545 177
+rect 1520 140 1952 144
+rect 1520 123 1928 140
+rect 1946 123 1952 140
+rect 1520 117 1952 123
+use Prechargecell  Prechargecell_0
+timestamp 1605998110
+transform 0 -1 1666 1 0 139
+box 76 -104 347 121
+use 6T_sram_cell  6T_sram_cell_0
+timestamp 1605998999
+transform 0 1 1314 1 0 260
+box -83 -413 251 133
+use Differential_sense_amplifier  Differential_sense_amplifier_0
+timestamp 1605953384
+transform 0 1 2182 -1 0 521
+box -93 -333 413 180
+use write_driver  write_driver_0
+timestamp 1605960227
+transform 1 0 -157 0 -1 425
+box 155 -252 913 425
+<< labels >>
+flabel locali 1550 214 1550 214 0 FreeSans 64 0 0 0 bl
+flabel metal1 1554 477 1554 477 0 FreeSans 40 0 0 0 blbar
+flabel locali 1965 617 1965 617 0 FreeSans 40 0 0 0 blbar
+flabel locali 1962 129 1962 129 0 FreeSans 40 0 0 0 bl
+flabel locali -21 500 -21 500 0 FreeSans 40 0 0 0 din
+flabel locali 1269 523 1269 523 0 FreeSans 40 0 0 0 qbar
+flabel locali 1233 172 1233 172 0 FreeSans 40 0 0 0 q
+flabel locali 880 332 880 332 0 FreeSans 40 0 0 0 wl
+flabel locali 1447 332 1447 332 0 FreeSans 40 0 0 0 vdd
+flabel locali 1773 343 1773 343 0 FreeSans 40 0 0 0 vdd
+flabel locali 2366 423 2366 423 0 FreeSans 40 0 0 0 vdd
+flabel locali -4 349 -4 349 0 FreeSans 40 0 0 0 vdd
+flabel locali 1834 374 1834 374 0 FreeSans 40 0 0 0 gnd
+flabel locali 1830 524 1830 524 0 FreeSans 40 0 0 0 ren
+flabel locali 2153 100 2153 100 0 FreeSans 40 0 0 0 dout
+flabel locali 777 336 777 336 0 FreeSans 40 0 0 0 wen
+flabel locali -14 651 -14 651 0 FreeSans 40 0 0 0 gnd
+flabel metal1 781 195 781 195 0 FreeSans 40 0 0 0 bl
+flabel metal1 792 493 792 493 0 FreeSans 40 0 0 0 blbar
+flabel locali 1522 349 1522 349 0 FreeSans 40 0 0 0 gnd
+flabel metal1 1527 513 1527 513 0 FreeSans 40 0 0 0 blbar
+flabel metal1 1529 178 1529 178 0 FreeSans 40 0 0 0 bl
+<< end >>

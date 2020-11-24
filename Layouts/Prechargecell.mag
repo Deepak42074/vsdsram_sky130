@@ -1,0 +1,101 @@
+magic
+tech sky130A
+timestamp 1605998110
+<< nwell >>
+rect 76 -104 347 86
+<< pmos >>
+rect 108 0 150 15
+rect 277 0 319 15
+<< pdiff >>
+rect 108 47 150 54
+rect 108 30 121 47
+rect 138 30 150 47
+rect 277 46 319 54
+rect 108 15 150 30
+rect 277 29 290 46
+rect 307 29 319 46
+rect 277 15 319 29
+rect 108 -16 150 0
+rect 108 -33 122 -16
+rect 139 -33 150 -16
+rect 108 -41 150 -33
+rect 277 -16 319 0
+rect 277 -33 289 -16
+rect 306 -33 319 -16
+rect 277 -41 319 -33
+<< pdiffc >>
+rect 121 30 138 47
+rect 290 29 307 46
+rect 122 -33 139 -16
+rect 289 -33 306 -16
+<< nsubdiff >>
+rect 108 -86 145 -69
+rect 162 -86 253 -69
+rect 270 -86 323 -69
+<< nsubdiffcont >>
+rect 145 -86 162 -69
+rect 253 -86 270 -69
+<< poly >>
+rect 186 67 232 73
+rect 186 49 194 67
+rect 219 49 232 67
+rect 186 42 232 49
+rect 201 15 216 42
+rect 90 0 108 15
+rect 150 0 277 15
+rect 319 0 336 15
+<< polycont >>
+rect 194 49 219 67
+<< locali >>
+rect 186 101 200 118
+rect 219 101 232 118
+rect 123 54 140 83
+rect 201 73 218 101
+rect 186 67 232 73
+rect 110 47 150 54
+rect 110 30 121 47
+rect 138 30 150 47
+rect 186 49 194 67
+rect 219 49 232 67
+rect 290 54 307 83
+rect 186 42 232 49
+rect 278 46 318 54
+rect 110 22 150 30
+rect 278 29 290 46
+rect 307 29 318 46
+rect 278 22 318 29
+rect 110 -16 150 -9
+rect 110 -33 122 -16
+rect 139 -33 150 -16
+rect 110 -41 150 -33
+rect 277 -16 317 -9
+rect 277 -33 289 -16
+rect 306 -33 317 -16
+rect 277 -41 317 -33
+rect 121 -69 138 -41
+rect 285 -69 302 -41
+rect 108 -86 121 -69
+rect 138 -86 145 -69
+rect 162 -86 253 -69
+rect 270 -86 285 -69
+rect 302 -86 323 -69
+<< viali >>
+rect 200 101 219 118
+rect 121 -86 138 -69
+rect 285 -86 302 -69
+<< metal1 >>
+rect 180 118 238 121
+rect 180 101 200 118
+rect 219 101 238 118
+rect 180 97 238 101
+rect 100 -69 327 -66
+rect 100 -86 121 -69
+rect 138 -86 285 -69
+rect 302 -86 327 -69
+rect 100 -89 327 -86
+<< labels >>
+flabel metal1 185 -82 218 -72 0 FreeSans 64 0 0 0 vdd
+flabel locali 290 61 306 73 0 FreeSans 64 0 0 0 blbar
+flabel locali 123 62 138 74 0 FreeSans 64 0 0 0 bl
+flabel metal1 186 101 199 118 0 FreeSans 72 0 0 0 gnd
+<< end >>

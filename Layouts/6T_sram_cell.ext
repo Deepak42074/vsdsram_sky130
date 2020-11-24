@@ -1,0 +1,39 @@
+timestamp 1605998999
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w
+parameters sky130_fd_pr__pfet_01v8 l=l w=w
+node "blbar" 224 705.501 238 -742 ndif 0 0 0 0 0 0 0 0 6720 328 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13428 732 57496 2168 0 0 0 0 0 0 0 0 0 0
+node "bl" 197 622.206 -54 -744 ndif 0 0 0 0 0 0 0 0 6888 332 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10780 588 56528 2212 0 0 0 0 0 0 0 0 0 0
+node "wl" 912 380.15 -86 -662 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18732 1232 0 0 5676 344 0 0 0 0 0 0 0 0 0 0 0 0
+node "q" 2451 1469.32 -54 -632 ndif 0 0 0 0 0 0 0 0 12768 640 6552 324 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22044 1448 0 0 56600 3088 0 0 0 0 0 0 0 0 0 0 0 0
+node "qbar" 2399 1159.3 36 -406 p 0 0 0 0 0 0 0 0 12768 640 6552 324 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23600 1548 0 0 43836 2352 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 5770 1116.09 -82 -46 nw 0 0 0 0 161312 1704 0 0 20352 944 13440 656 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 45456 1664 41736 1076 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -44 -380 ndif 0 0 0 0 0 0 0 0 13440 656 14788 848 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 41764 1608 33600 968 0 0 0 0 0 0 0 0 0 0
+cap "bl" "blbar" 11.4519
+cap "wl" "q" 7.20198
+cap "wl" "blbar" 15.5584
+cap "qbar" "vdd" 121.08
+cap "wl" "bl" 14.1886
+cap "qbar" "q" 320.565
+cap "qbar" "blbar" 79.4201
+cap "q" "vdd" 164.644
+cap "vdd" "blbar" 71.4749
+cap "bl" "vdd" 88.125
+cap "qbar" "wl" 3.0531
+cap "q" "bl" 345.258
+device msubckt sky130_fd_pr__nfet_01v8 238 -662 239 -661 l=30 w=84 "gnd" "wl" 60 0 "blbar" 84 0 "qbar" 84 0
+device msubckt sky130_fd_pr__nfet_01v8 -54 -662 -53 -661 l=30 w=84 "gnd" "wl" 60 0 "bl" 84 0 "q" 84 0
+device msubckt sky130_fd_pr__nfet_01v8 334 -380 335 -379 l=30 w=84 "gnd" "q" 60 0 "gnd" 84 0 "qbar" 84 0
+device msubckt sky130_fd_pr__nfet_01v8 36 -380 37 -379 l=30 w=84 "gnd" "qbar" 60 0 "gnd" 84 0 "q" 84 0
+device msubckt sky130_fd_pr__pfet_01v8 334 -6 335 -5 l=30 w=84 "vdd" "q" 60 0 "vdd" 84 0 "qbar" 84 0
+device msubckt sky130_fd_pr__pfet_01v8 36 -6 37 -5 l=30 w=84 "vdd" "qbar" 60 0 "vdd" 84 0 "q" 84 0
+subcap "blbar" -583.242
+subcap "bl" -533.545
+subcap "wl" -16.6505
+subcap "q" -1380.66
+subcap "qbar" -213.771
+subcap "vdd" -152.558

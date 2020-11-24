@@ -1,0 +1,114 @@
+timestamp 1606001460
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use Prechargecell Prechargecell_0 0 -1 3332 1 0 278
+use 6T_sram_cell 6T_sram_cell_0 0 1 2628 1 0 520
+use Differential_sense_amplifier Differential_sense_amplifier_0 0 1 4364 -1 0 1042
+use write_driver write_driver_0 1 0 -314 0 -1 850
+node "bl" 1 290.608 1452 206 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 33304 1312 0 0 0 0 0 0 0 0 0 0
+node "blbar" 1 299.293 1468 966 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35312 1348 0 0 0 0 0 0 0 0 0 0
+node "dout" 34 73.3563 4290 196 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3196 256 0 0 0 0 0 0 0 0 0 0 0 0
+node "q" 28 64.0531 2452 340 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2652 224 0 0 0 0 0 0 0 0 0 0 0 0
+node "bl" 158 823.528 3074 372 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14312 920 66388 2600 0 0 0 0 0 0 0 0 0 0
+equiv "bl" "bl"
+equiv "bl" "bl"
+node "vdd" 18 50.1316 3504 668 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1872 176 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 26 64.1308 2826 644 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2736 224 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd" 23 55.9128 3040 680 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2176 196 0 0 0 0 0 0 0 0 0 0 0 0
+node "wl" 24 61.7976 1752 646 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2592 216 0 0 0 0 0 0 0 0 0 0 0 0
+node "wen" 99 179.18 1284 654 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9384 620 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 38 80.3337 -26 682 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3604 280 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd" 22 53.587 3656 732 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2040 188 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 21 52.4241 4676 830 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1972 184 0 0 0 0 0 0 0 0 0 0 0 0
+node "ren" 38 80.3337 3652 1028 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3604 280 0 0 0 0 0 0 0 0 0 0 0 0
+node "qbar" 43 88.474 2522 934 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4080 308 0 0 0 0 0 0 0 0 0 0 0 0
+node "din" 19 50.0983 -46 982 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1836 176 0 0 0 0 0 0 0 0 0 0 0 0
+node "blbar" 165 878.651 3058 944 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12716 884 74292 2892 0 0 0 0 0 0 0 0 0 0
+equiv "blbar" "blbar"
+equiv "blbar" "blbar"
+node "gnd" 39 81.4966 -32 1282 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3672 284 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_3160_436#" 34567 2.196 3160 436 nw 0 0 0 0 732 256 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_3160_858#" 20825 2.352 3160 858 nw 0 0 0 0 784 212 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "gnd" "bl" 4.32857
+cap "bl" "dout" 3.92308
+cap "gnd" "din" 4.96241
+cap "wl" "wen" 4.8125
+cap "bl" "blbar" 4.03295
+cap "vdd" "din" 4.21805
+cap "blbar" "w_3160_858#" 0.7252
+cap "gnd" "ren" 7.55725
+cap "bl" "w_3160_436#" 0.6771
+cap "gnd" "blbar" 6.6
+subcap "bl" -318.114
+subcap "blbar" -324.395
+subcap "wl" -75.051
+cap "write_driver_0/wen" "write_driver_0/out1" 2.53846
+cap "write_driver_0/gnd" "write_driver_0/din" 8.81937
+cap "write_driver_0/wen" "write_driver_0/out2" 4.23077
+cap "write_driver_0/vdd" "write_driver_0/din" 9.59469
+subcap "bl" -131.556
+subcap "gnd" -148.906
+subcap "wen" -737.055
+subcap "blbar" -60.1277
+cap "6T_sram_cell_0/gnd" "6T_sram_cell_0/blbar" 1.42109e-14
+cap "6T_sram_cell_0/blbar" "6T_sram_cell_0/qbar" 45.9301
+cap "6T_sram_cell_0/gnd" "6T_sram_cell_0/bl" -1.42109e-14
+cap "6T_sram_cell_0/bl" "6T_sram_cell_0/q" 13.9118
+cap "Prechargecell_0/gnd" "6T_sram_cell_0/vdd" 7.76786
+cap "6T_sram_cell_0/wl" "write_driver_0/wen" 0.692308
+cap "Prechargecell_0/gnd" "6T_sram_cell_0/q" 0.592308
+subcap "dout" -114.619
+subcap "q" -393.163
+subcap "qbar" -320.447
+cap "Differential_sense_amplifier_0/3" "Prechargecell_0/vdd" 7.56688
+cap "Prechargecell_0/blbar" "6T_sram_cell_0/vdd" 7.15327
+cap "Differential_sense_amplifier_0/ren" "Differential_sense_amplifier_0/gnd" 9.79157
+cap "Prechargecell_0/gnd" "6T_sram_cell_0/vdd" 40.7009
+cap "Prechargecell_0/blbar" "Differential_sense_amplifier_0/gnd" 9.75885
+cap "Prechargecell_0/bl" "Differential_sense_amplifier_0/dout" -0.115385
+cap "Prechargecell_0/blbar" "Prechargecell_0/bl" -1.77636e-15
+cap "Prechargecell_0/gnd" "Prechargecell_0/bl" 29.3442
+cap "Prechargecell_0/blbar" "Prechargecell_0/vdd" 14.6246
+cap "Prechargecell_0/blbar" "Differential_sense_amplifier_0/3" 7.53261
+cap "Prechargecell_0/gnd" "Prechargecell_0/vdd" 7.10543e-15
+cap "Prechargecell_0/bl" "6T_sram_cell_0/vdd" 13.6838
+cap "Prechargecell_0/bl" "Differential_sense_amplifier_0/gnd" 42.5544
+cap "Differential_sense_amplifier_0/ren" "Prechargecell_0/blbar" 2.32394
+cap "Prechargecell_0/blbar" "6T_sram_cell_0/qbar" 0.84375
+cap "Prechargecell_0/blbar" "Prechargecell_0/gnd" 21.6074
+cap "Prechargecell_0/vdd" "Differential_sense_amplifier_0/gnd" 184.552
+cap "Differential_sense_amplifier_0/3" "Differential_sense_amplifier_0/gnd" -2.84217e-14
+cap "Prechargecell_0/vdd" "Prechargecell_0/bl" 18.3801
+cap "Prechargecell_0/gnd" "6T_sram_cell_0/q" 0.592308
+cap "Differential_sense_amplifier_0/dout" "Differential_sense_amplifier_0/bl" -0.115385
+merge "Differential_sense_amplifier_0/gnd" "6T_sram_cell_0/gnd" -83.5759 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -340 -224 0 0 0 0 0 0 0 0 0 0 0 0
+merge "6T_sram_cell_0/gnd" "Prechargecell_0/VSUBS"
+merge "Prechargecell_0/VSUBS" "Prechargecell_0/gnd"
+merge "Prechargecell_0/gnd" "write_driver_0/gnd"
+merge "write_driver_0/gnd" "gnd"
+merge "gnd" "VSUBS"
+merge "Differential_sense_amplifier_0/vdd" "Prechargecell_0/vdd" -95.9591 0 0 0 0 -1516 -468 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2592 -280 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Prechargecell_0/vdd" "w_3160_858#"
+merge "w_3160_858#" "w_3160_436#"
+merge "w_3160_436#" "6T_sram_cell_0/vdd"
+merge "6T_sram_cell_0/vdd" "write_driver_0/vdd"
+merge "write_driver_0/vdd" "vdd"
+merge "6T_sram_cell_0/q" "q" -32.7091 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9828 -152 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Differential_sense_amplifier_0/bl" "Prechargecell_0/bl" -166.286 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 928 -152 -2228 -568 0 0 0 0 0 0 0 0 0 0
+merge "Prechargecell_0/bl" "6T_sram_cell_0/bl"
+merge "6T_sram_cell_0/bl" "write_driver_0/bl"
+merge "write_driver_0/bl" "bl"
+merge "Differential_sense_amplifier_0/ren" "ren" -7.4087 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13396 -72 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Differential_sense_amplifier_0/blbar" "Prechargecell_0/blbar" -192.128 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 652 -156 1080 -660 0 0 0 0 0 0 0 0 0 0
+merge "Prechargecell_0/blbar" "6T_sram_cell_0/blbar"
+merge "6T_sram_cell_0/blbar" "write_driver_0/blbar"
+merge "write_driver_0/blbar" "blbar"
+merge "write_driver_0/wen" "wen" -34.8855 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 340 -128 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Differential_sense_amplifier_0/dout" "dout" -24.1678 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1224 -92 0 0 0 0 0 0 0 0 0 0 0 0
+merge "6T_sram_cell_0/qbar" "qbar" -23.4796 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1968 -92 0 0 0 0 0 0 0 0 0 0 0 0
+merge "write_driver_0/din" "din" -25.6774 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -408 -92 0 0 0 0 0 0 0 0 0 0 0 0
+merge "6T_sram_cell_0/wl" "wl" -32.6326 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -792 -116 0 0 0 0 0 0 0 0 0 0 0 0
