@@ -1,0 +1,54 @@
+* NGSPICE file created from Tristate_buffer.ext - technology: sky130A
+
+.param temp=27
+.param supl = 1.8V
+
+*Including sky130 devoce models
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+Vdd vdd 0 {supl}
+
+* Top level circuit Tristate_buffer
+
+X0 out1 inb gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X1 inb in gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X2 out1 inb vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X3 out en out1 gnd sky130_fd_pr__nfet_01v8 w=550000u l=150000u
+X4 inb in vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X5 out1 enb out vdd sky130_fd_pr__pfet_01v8 w=550000u l=150000u
+C0 out1 vdd 0.06fF
+C1 out vdd 0.01fF
+C2 enb out1 0.00fF
+C3 inb out1 0.07fF
+C4 enb en 0.02fF
+C5 in vdd 0.03fF
+C6 inb en 0.00fF
+C7 inb out 0.01fF
+C8 inb in 0.05fF
+C9 enb vdd 0.00fF
+C10 inb vdd 0.09fF
+C11 en out1 0.00fF
+C12 out out1 0.11fF
+C13 inb enb 0.00fF
+C14 in out1 0.01fF
+C15 en gnd 0.19fF
+C16 out gnd 0.18fF
+C17 enb gnd 0.19fF
+C18 inb gnd 0.53fF
+C19 in gnd 0.32fF
+C20 out1 gnd 0.72fF
+C21 vdd gnd 1.96fF
+
+Vin in 0 pulse(0 1.8 0 60ps 60ps 0.5ns 1ns)
+Ven en 0 pulse(0 1.8 0 60ps 60ps 2ns 4ns)
+Venb enb 0 pulse(1.8 0 0 60ps 60ps 2ns 4ns)
+
+.tran 0.01p 10ns
+
+.control
+run
+
+plot en+6 enb+4 in+2 out
+.endc
+.end
+
