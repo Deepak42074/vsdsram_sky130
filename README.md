@@ -9,6 +9,7 @@ are designed and simluated using opensource tools.
 - [Installing and Cloning Instructions](#Installing-and-Cloning-Instructions)  
 - [SRAM Memory Architecture](##SRAM-Memory-Architecture)
 - [Inputs to OpenRAM compiler](##Inputs-to-OpenRAM-compiler)
+- [Prelayout Schematic and Simulation waveforms](#Prelayout-Schematic-and-Simulation-waveforms)
 - [Stability Analysis of 6T-SRAM cell](##Stability-Analysis-of-6T-SRAM-cell)
 - [Layouts and Postlayout Simulation waveforms](#Layouts-and-Postlayout-Simulation-waveforms)
 - [Future Work](#future-work) 
@@ -32,7 +33,7 @@ NOTE: Any other schematic drawing tool can be used in place of xschem. Here inst
 Please follow below instructions :(For Ubuntu users)
 <dl>
     <dd> 1. Open terminal </dd>
-    <dd> 2. Type below command to install git and clone repository: </dd>
+    <dd> 2. Type below command to install ngspice and clone repository: </dd>
 </dl>
 
 ```
