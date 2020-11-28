@@ -409,7 +409,8 @@ $  ngspice Dff.spice
 
 ![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/Dff.png)
 
-## 6. 1bit_sram
+## 6. 1bit_sram:
+This consists of 1 bit SRAM integrated with precharge circuit ,sense amplifier and write driver circuitary to perform read and write operation.
 
 ![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Layouts/1bit_sram.png)
 
@@ -439,7 +440,7 @@ $  ngspice 1bit_sram_write.spice
 ![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/1bit_sram_write.png)
 
 # Future Work
-* Configuring OpenRAM with Sky130 pdk and compiling SRAM with openRAM.
+* Configuring OpenRAM with Sky130 pdk and providing custom cells to openRAM for compilation.
 
 # Author
 * Deepak verma
