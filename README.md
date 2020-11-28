@@ -307,7 +307,7 @@ The four parameters A,B,C,D on above plot of Ncurve  define the stability of 6T-
 
     SVNM = V(C) - V(A) = 0.84 - 0.18 = 0.66V
     
-2. Static Current Noise Margin (SINM) : It is the peak current between first two crossing and it is the maximum tolerable DC current that can be injected into the SRAM cell     before its flip.
+2. Static Current Noise Margin (SINM) : It is the peak current between first two crossing and it is the maximum tolerable DC current that can be injected into the SRAM cell     before it flips.
 
     SINM = I(B) = ~299 uA
     
