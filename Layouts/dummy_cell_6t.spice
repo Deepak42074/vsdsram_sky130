@@ -1,0 +1,13 @@
+* NGSPICE file created from dummy_cell_6t.ext - technology: sky130A
+
+
+* Top level circuit dummy_cell_6t
+
+X0 qbar wl blbar_noconn gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X1 qbar q vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X2 q qbar vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X3 q qbar gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 qbar q gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X5 q wl bl_noconn gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+.end
+

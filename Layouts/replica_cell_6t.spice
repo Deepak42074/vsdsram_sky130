@@ -1,0 +1,13 @@
+* NGSPICE file created from replica_cell_6t.ext - technology: sky130A
+
+
+* Top level circuit replica_cell_6t
+
+X0 vdd wl blbar gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X1 vdd q vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X2 q vdd vdd vdd sky130_fd_pr__pfet_01v8 w=420000u l=150000u
+X3 q vdd gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X4 vdd q gnd gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+X5 q wl bl gnd sky130_fd_pr__nfet_01v8 w=420000u l=150000u
+.end
+
