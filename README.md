@@ -440,7 +440,7 @@ $  ngspice 1bit_sram_write.spice
 ![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/1bit_sram_write.png)
 
 # Future Work
-* Configuring OpenRAM with Sky130 pdk and providing custom cells to openRAM for compilation.
+* Optimization of layout design of custom cells for better cell fitting and compiling custom cells with openRAM. 
 
 # Author
 * Deepak verma
